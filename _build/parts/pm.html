@@ -1,0 +1,57 @@
+<div class="app">
+  <aside class="side" id="menu" aria-label="Sidebar">
+    <a href="#" class="brand"><i aria-hidden="true"></i>Taskwise</a>
+    <ul><li><a href="#" class="on">Overview</a></li><li><a href="#">My tasks</a></li><li><a href="#">Inbox</a></li><li><a href="#">Reports</a></li></ul>
+    <b>PROJECTS</b>
+    <ul><li><a href="#" class="on"><i style="background:var(--amber)"></i>Mobile app 2.0</a></li><li><a href="#"><i style="background:var(--blue)"></i>Website relaunch</a></li><li><a href="#"><i style="background:var(--grn)"></i>Customer portal</a></li><li><a href="#"><i style="background:var(--pink)"></i>Q1 campaign</a></li></ul>
+    <div class="me"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&q=60&auto=format&fit=crop" alt="" width="34" height="34"><div>Priya Shah<small>Project lead</small></div></div>
+  </aside>
+  <main class="main" id="main">
+    <div class="top">
+      <button class="menu-btn burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <div><h1>Mobile app 2.0</h1><p>Sprint 7 of 10 · Launch on 5 December</p></div>
+      <div class="r"><div class="avs"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&q=60&auto=format&fit=crop" alt="" width="30" height="30"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=60&auto=format&fit=crop" alt="" width="30" height="30"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=60&q=60&auto=format&fit=crop" alt="" width="30" height="30"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&q=60&auto=format&fit=crop" alt="" width="30" height="30"></div><button class="btn" type="button">Share</button><button class="btn pri" type="button">+ New task</button></div>
+    </div>
+    <section class="kpis" aria-label="Project numbers">
+      <div class="card kpi"><small>Overall progress</small><div class="v" id="pct">0%</div><div class="prog"><i id="pbar" style="width:0"></i></div></div>
+      <div class="card kpi"><small>Tasks done</small><div class="v"><span id="done">0</span> / <span id="tot">0</span></div><small>in this sprint</small></div>
+      <div class="card kpi"><small>Budget used</small><div class="v">$84,200</div><small>of $120,000 (70%)</small></div>
+      <div class="card kpi"><small>Days to launch</small><div class="v">52</div><small style="color:var(--grn)">On track</small></div>
+    </section>
+    <section class="card" aria-labelledby="g-t"><div class="card-h"><h2 id="g-t">Timeline</h2><span style="color:var(--muted);font-size:13px">October to December · 8 weeks</span></div>
+      <div class="gantt"><div class="g-grid" id="gantt"></div></div></section>
+    <div class="row">
+      <section class="card" aria-labelledby="b-t"><div class="card-h"><h2 id="b-t">Sprint 7 burndown</h2><span style="color:var(--muted);font-size:13px">Story points left</span></div><svg id="burn" role="img" aria-label="Burndown chart: actual work remaining is close to the ideal line"></svg></section>
+      <section class="card" aria-labelledby="t-t"><div class="card-h"><h2 id="t-t">Sprint tasks</h2><span style="color:var(--muted);font-size:13px">Tick to complete</span></div><div class="tasks" id="tasks"></div></section>
+      <section class="card" aria-labelledby="w-t"><div class="card-h"><h2 id="w-t">Team workload</h2><span style="color:var(--muted);font-size:13px">This week</span></div>
+        <div class="wl"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&q=60&auto=format&fit=crop" alt="" width="30" height="30"><div><b>Lena</b><span>32h of 40h</span><div class="t"><i style="width:80%;background:var(--grn)"></i></div></div></div>
+        <div class="wl"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=60&auto=format&fit=crop" alt="" width="30" height="30"><div><b>David</b><span class="over">46h of 40h</span><div class="t"><i style="width:100%;background:var(--red)"></i></div></div></div>
+        <div class="wl"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=60&q=60&auto=format&fit=crop" alt="" width="30" height="30"><div><b>Leo</b><span>38h of 40h</span><div class="t"><i style="width:95%;background:var(--amber)"></i></div></div></div>
+        <div class="wl"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&q=60&auto=format&fit=crop" alt="" width="30" height="30"><div><b>Aiko</b><span>24h of 40h</span><div class="t"><i style="width:60%;background:var(--grn)"></i></div></div></div>
+        <p style="color:var(--muted);font-size:13px;margin:12px 0 0">David is over capacity. Move 2 tasks to Aiko?</p></section>
+    </div>
+    <p class="foot">Taskwise project dashboard, a <a href="https://mmrahmanbappi.github.io/free-html-templates/">free HTML template</a>. Sample data only. Photos: <a href="https://unsplash.com" rel="noopener">Unsplash</a>. © <span id="yr">2026</span></p>
+  </main>
+</div>
+<script>
+const W=["Oct 6","Oct 13","Oct 20","Oct 27","Nov 3","Nov 10","Nov 17","Nov 24"];
+const G=[["Research and planning",0,1.5,"#9CA3AF","Done"],["App design",0.8,3.2,"#60A5FA","Design"],["Login and accounts",2,4.5,"#4ADE80","Build"],["Payments",3,5.8,"#F5B700","Build"],["Notifications",4.2,6.5,"#F472B6","Build"],["Testing and fixes",5.5,7.6,"#A78BFA","QA"]];
+let g='<div class="wk" style="text-align:left">Workstream</div>'+W.map((w,i)=>`<div class="wk${i===2?' now':''}">${w}</div>`).join('');
+G.forEach(r=>{g+=`<div class="nm">${r[0]}</div><div class="lane">${r[0]==='App design'?'<span class="today" style="left:30%" aria-hidden="true"></span>':''}<span class="bar" style="left:${r[1]/8*100}%;width:${(r[2]-r[1])/8*100}%;background:${r[3]}">${r[4]}</span></div>`});
+g+='<div class="nm">Launch</div><div class="lane"><span class="ms" style="left:calc(97% - 7px)" title="Launch milestone"></span></div>';
+document.getElementById('gantt').innerHTML=g;
+const T=[["Design payment screens","Lena","Design",1],["Connect card payments API","David","Build",1],["Push notification settings","Leo","Build",0],["Write test cases for login","Aiko","QA",1],["Fix crash on older phones","David","Bug",0],["App store screenshots","Lena","Design",0]];
+const tc={Design:"#60A5FA",Build:"#4ADE80",QA:"#A78BFA",Bug:"#F87171"};
+document.getElementById('tasks').innerHTML=T.map((t,i)=>`<label><input type="checkbox" ${t[3]?'checked':''} data-i="${i}"><span>${t[0]}<span class="tag" style="background:${tc[t[2]]};color:#17171A">${t[2]}</span><small>${t[1]}</small></span></label>`).join('');
+function prog(){const b=[...document.querySelectorAll('#tasks input')],d=b.filter(x=>x.checked).length;document.getElementById('done').textContent=d;document.getElementById('tot').textContent=b.length;
+const p=Math.round(58+d/b.length*20);document.getElementById('pct').textContent=p+'%';document.getElementById('pbar').style.width=p+'%'}
+document.getElementById('tasks').addEventListener('change',prog);prog();
+function burn(){const s=document.getElementById('burn'),w=s.clientWidth||360,h=210,pl=30,pb=22,days=10,ideal=[60,54,48,42,36,30,24,18,12,6,0],act=[60,57,51,47,40,36,31];
+const X=i=>pl+i/days*(w-pl-8),Y=v=>h-pb-v/60*(h-pb-10);let o='';
+[0,20,40,60].forEach(v=>{o+=`<line x1="${pl}" x2="${w-8}" y1="${Y(v)}" y2="${Y(v)}" stroke="#34343B"/><text x="${pl-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="#8E8E99">${v}</text>`});
+o+=`<path d="${ideal.map((v,i)=>(i?'L':'M')+X(i)+' '+Y(v)).join(' ')}" fill="none" stroke="#8E8E99" stroke-dasharray="4 4" stroke-width="1.5"/>`;
+o+=`<path d="${act.map((v,i)=>(i?'L':'M')+X(i)+' '+Y(v)).join(' ')}" fill="none" stroke="#F5B700" stroke-width="3"/><circle cx="${X(6)}" cy="${Y(31)}" r="5" fill="#F5B700"/>`;
+o+=`<text x="${pl}" y="${h-4}" font-size="11" fill="#8E8E99">Day 1</text><text x="${w-8}" y="${h-4}" text-anchor="end" font-size="11" fill="#8E8E99">Day 10</text>`;
+s.setAttribute('viewBox',`0 0 ${w} ${h}`);s.innerHTML=o}
+burn();window.addEventListener('resize',burn);
+</script>

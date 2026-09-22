@@ -1,0 +1,95 @@
+<div class="ship" aria-live="polite"><span id="shipmsg">Free delivery on orders over $150</span><div class="t" aria-hidden="true"><i id="shipbar"></i></div></div>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <button class="burger btn-line" style="border:1px solid var(--line);background:none;padding:8px 10px;cursor:pointer" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <ul class="menu" id="menu"><li><a href="#shop">New in</a></li><li><a href="#shop">Women</a></li><li><a href="#collections">Collections</a></li><li><a href="#lookbook">Lookbook</a></li><li><a href="#reviews">Reviews</a></li></ul>
+    <a href="#" class="logo">MAISON VERA</a>
+    <div class="icons"><a href="#" aria-label="Search">⌕<span class="lbl">Search</span></a><button type="button" id="openBag" aria-label="Open shopping bag"><span class="lbl">Bag</span><span class="bag-count" id="bagCount">0</span></button></div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title" style="padding:0">
+    <div class="hero-copy">
+      <span class="season">AUTUMN / WINTER 2026</span>
+      <h1 id="hero-title">Quiet clothes for loud cities.</h1>
+      <p>Maison Vera makes timeless women's clothing from natural fabrics, in small batches, in Portugal. Pieces you'll still reach for in ten years.</p>
+      <div class="actions"><a href="#shop" class="btn btn-dark">Shop new arrivals</a><a href="#lookbook" class="btn btn-line">View the lookbook</a></div>
+    </div>
+    <div class="hero-img"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=75&auto=format&fit=crop" alt="Woman in a burgundy coat carrying shopping bags" width="1200" height="1400" fetchpriority="high"></div>
+  </section>
+  <div class="perks"><div><b>Free delivery</b>On orders over $150</div><div><b>Free returns</b>Within 30 days</div><div><b>Natural fabrics</b>Wool, linen and organic cotton</div><div><b>Made in Portugal</b>By family-run workshops</div></div>
+
+  <section id="shop" aria-labelledby="shop-title">
+    <div class="wrap">
+      <div class="head"><h2 id="shop-title">New arrivals</h2><div class="chips" role="group" aria-label="Filter by category" id="chips"><button type="button" aria-pressed="true" data-c="all">All</button><button type="button" aria-pressed="false" data-c="Knitwear">Knitwear</button><button type="button" aria-pressed="false" data-c="Outerwear">Outerwear</button><button type="button" aria-pressed="false" data-c="Tops">Tops</button><button type="button" aria-pressed="false" data-c="Trousers">Trousers</button></div></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="look" id="lookbook" aria-labelledby="look-title" style="padding:0">
+    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=75&auto=format&fit=crop" alt="Model in striped trousers and a white top against a green wall" width="1200" height="900" loading="lazy">
+    <div><h2 id="look-title">The autumn edit</h2><p>Soft knits, relaxed tailoring and warm colours made for long walks and slow Sundays. Styled by our design team in Lisbon.</p><a href="#shop" class="btn">Shop the look</a></div>
+  </section>
+
+  <section id="collections" aria-labelledby="col-title">
+    <div class="wrap">
+      <div class="head"><h2 id="col-title">Shop by collection</h2></div>
+      <div class="cats">
+        <a class="cat" href="#shop"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=700&q=75&auto=format&fit=crop" alt="Rail of neutral-coloured coats and shirts in a shop" width="700" height="875" loading="lazy"><span>Everyday essentials</span></a>
+        <a class="cat" href="#shop"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700&q=75&auto=format&fit=crop" alt="Person in bright yellow trousers standing by a basketball hoop" width="700" height="875" loading="lazy"><span>Colour stories</span></a>
+        <a class="cat" href="#shop"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700&q=75&auto=format&fit=crop" alt="White and cream tops hanging on a wooden rail" width="700" height="875" loading="lazy"><span>Linen and cotton</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="rev" id="reviews" aria-labelledby="rev-title">
+    <div class="wrap">
+      <div class="head"><h2 id="rev-title">Loved by 40,000 women</h2><span style="color:var(--muted)">4.8 out of 5 from 6,200 reviews</span></div>
+      <div class="rv-grid">
+        <blockquote class="rv"><div class="st" aria-label="5 stars">★★★★★</div><p>"The wool jumper is the softest thing I own. Worth every penny."</p><cite>Hannah, London</cite></blockquote>
+        <blockquote class="rv"><div class="st" aria-label="5 stars">★★★★★</div><p>"Fits true to size and the quality is better than brands twice the price."</p><cite>Marta, Madrid</cite></blockquote>
+        <blockquote class="rv"><div class="st" aria-label="5 stars">★★★★★</div><p>"Returned one size for another in three days. Easy and friendly."</p><cite>Claire, New York</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="news" aria-labelledby="news-title">
+    <div class="wrap"><h2 id="news-title">10% off your first order</h2><p>Join our list for new collections, private sales and styling notes. One email a week at most.</p>
+      <form action="https://formspree.io/f/your-form-id" method="POST" aria-label="Newsletter signup"><label class="skip" for="ne">Email</label><input id="ne" name="email" type="email" placeholder="Your email address" autocomplete="email" required><button class="btn btn-dark" type="submit">Sign up</button></form></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a href="#" class="logo">MAISON VERA</a><p style="margin-top:14px;max-width:32ch">Timeless women's clothing, made in small batches in Portugal.</p></div>
+      <div><h3>SHOP</h3><ul><li><a href="#shop">New in</a></li><li><a href="#shop">Knitwear</a></li><li><a href="#shop">Outerwear</a></li></ul></div>
+      <div><h3>HELP</h3><ul><li><a href="#">Delivery</a></li><li><a href="#">Returns</a></li><li><a href="#">Size guide</a></li></ul></div>
+      <div><h3>ABOUT</h3><ul><li><a href="#">Our story</a></li><li><a href="#">Workshops</a></li><li><a href="https://www.instagram.com/" rel="noopener">Instagram</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span id="yr">2026</span> Maison Vera</span><span>Photos: <a href="https://unsplash.com" rel="noopener">Unsplash</a> | <a href="https://mmrahmanbappi.github.io/free-html-templates/">Free HTML Templates</a></span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
+  <div class="dr-h"><h2>Your bag</h2><button type="button" id="closeBag" aria-label="Close shopping bag">×</button></div>
+  <div class="dr-items" id="items"></div>
+  <div class="dr-f"><div class="sub"><span>Subtotal</span><b id="subtotal">$0</b></div><button class="btn btn-dark" type="button">Checkout</button><p style="font-size:13px;color:var(--muted);text-align:center;margin:10px 0 0">Taxes and delivery calculated at checkout.</p></div>
+</aside>
+<script>
+const P=[["Chunky wool jumper","Knitwear",148,null,"1434389677669-e08b4cac3105","New",["#EFE6D8","#6E1E2C"]],["Cropped bomber jacket","Outerwear",220,null,"1591047139829-d91aecb6caea","",["#C07B55","#2B1D16"]],["Organic cotton tee","Tops",38,null,"1521572163474-6864f9cf17ab","",["#fff","#2B1D16","#8A9A7B"]],["Wide-leg jogger","Trousers",92,120,"1515886657613-9f3515b0c78f","Sale",["#E8B928","#2B1D16"]],["Linen shirt","Tops",86,null,"1490481651871-ab68de25d43d","",["#F4EFE8","#9FB4C7"]],["Double-breasted coat","Outerwear",340,null,"1483985988355-763728e1935b","New",["#6E1E2C","#2B1D16"]],["Striped palazzo trousers","Trousers",110,null,"1509631179647-0177331693ae","",["#2B1D16"]],["Relaxed overshirt","Outerwear",145,180,"1445205170230-053b83016050","Sale",["#D9CBB8","#5A4A3C"]]];
+const bag={};const $=id=>document.getElementById(id);const fm=n=>'$'+n.toFixed(0);
+function grid(c){$('grid').innerHTML=P.map((p,i)=>[p,i]).filter(([p])=>c==='all'||p[1]===c).map(([p,i])=>`<article class="p"><figure><img src="https://images.unsplash.com/photo-${p[4]}?w=600&h=800&q=75&auto=format&fit=crop" alt="${p[0]}" width="600" height="800" loading="lazy">${p[5]?`<span class="badge ${p[5]==='Sale'?'sale':''}">${p[5]}</span>`:''}<button class="btn btn-dark add" type="button" data-i="${i}">Add to bag</button></figure><h3>${p[0]}</h3><div class="pr">${fm(p[2])}${p[3]?`<s>${fm(p[3])}</s>`:''}</div><div class="sw" aria-label="Colours">${p[6].map(c=>`<i style="background:${c}"></i>`).join('')}</div></article>`).join('')}
+document.querySelectorAll('#chips button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#chips button').forEach(x=>x.setAttribute('aria-pressed',x===b));grid(b.dataset.c)}));grid('all');
+function render(){const ids=Object.keys(bag),tot=ids.reduce((a,i)=>a+P[i][2]*bag[i],0),n=ids.reduce((a,i)=>a+bag[i],0);
+$('bagCount').textContent=n;$('subtotal').textContent=fm(tot);
+$('items').innerHTML=ids.length?ids.map(i=>`<div class="ci"><img src="https://images.unsplash.com/photo-${P[i][4]}?w=140&h=180&q=70&auto=format&fit=crop" alt="" width="70" height="90"><div><b>${P[i][0]}</b><small>${fm(P[i][2])}</small><div class="q"><button type="button" data-q="${i}" data-d="-1" aria-label="One less">−</button><span>${bag[i]}</span><button type="button" data-q="${i}" data-d="1" aria-label="One more">+</button></div></div><button class="rm" type="button" data-rm="${i}">Remove</button></div>`).join(''):'<p class="empty">Your bag is empty.</p>';
+const left=150-tot;$('shipmsg').textContent=tot===0?'Free delivery on orders over $150':left>0?`You're ${fm(left)} away from free delivery`:'You have free delivery';$('shipbar').style.width=Math.min(100,tot/150*100)+'%'}
+function open(o){$('drawer').classList.toggle('open',o);$('scrim').classList.toggle('on',o);$('drawer').setAttribute('aria-hidden',!o);if(o)$('closeBag').focus()}
+$('grid').addEventListener('click',e=>{const b=e.target.closest('[data-i]');if(!b)return;bag[b.dataset.i]=(bag[b.dataset.i]||0)+1;render();open(true)});
+$('items').addEventListener('click',e=>{const q=e.target.closest('[data-q]'),r=e.target.closest('[data-rm]');if(q){bag[q.dataset.q]+= +q.dataset.d;if(bag[q.dataset.q]<=0)delete bag[q.dataset.q]}if(r)delete bag[r.dataset.rm];render()});
+$('openBag').addEventListener('click',()=>open(true));$('closeBag').addEventListener('click',()=>open(false));$('scrim').addEventListener('click',()=>open(false));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')open(false)});render();
+</script>

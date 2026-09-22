@@ -1,0 +1,59 @@
+<header class="top">
+  <div class="in">
+    <a href="#" class="brand"><i aria-hidden="true"></i>Tallybook</a>
+    <ul class="tnav" id="menu"><li><a href="#" class="on">Overview</a></li><li><a href="#">Invoices</a></li><li><a href="#">Expenses</a></li><li><a href="#">Banking</a></li><li><a href="#">Reports</a></li><li><a href="#">Tax</a></li></ul>
+    <div class="r"><span class="co">Greenline Landscaping Ltd.</span><button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=60&auto=format&fit=crop" alt="Your profile" width="34" height="34"></div>
+  </div>
+</header>
+<main class="content" id="main">
+  <div class="title"><div><h1>Financial overview</h1><p>Financial year 2026 · figures in US dollars</p></div><div style="display:flex;gap:8px"><button class="btn" type="button">Export to Excel</button><button class="btn pri" type="button">+ New invoice</button></div></div>
+  <section class="kpis" aria-label="Key figures">
+    <div class="card kpi dark"><small>Cash in the bank</small><div class="v">$214,380</div><span class="d g">+$18,240 this month</span></div>
+    <div class="card kpi"><small>Revenue this year</small><div class="v">$1,284,600</div><span class="d g">+12.8% vs last year</span></div>
+    <div class="card kpi"><small>Net profit margin</small><div class="v">18.4%</div><span class="d g">+2.1 pts</span></div>
+    <div class="card kpi"><small>Unpaid invoices</small><div class="v">$46,920</div><span class="d r">$12,300 overdue</span></div>
+  </section>
+  <div class="row">
+    <section class="card" aria-labelledby="c-t"><div class="card-h"><h2 id="c-t">Cash flow</h2><div class="lg"><span><i style="background:var(--grn)"></i>Money in</span><span><i style="background:#FDA4B8"></i>Money out</span><span><i style="background:var(--ink)"></i>Net</span></div></div><svg id="cash" role="img" aria-label="Chart of money in and money out by month, with net cash flow line"></svg></section>
+    <section class="card" aria-labelledby="p-t"><div class="card-h"><h2 id="p-t">Profit and loss, this year</h2></div>
+      <table class="pl"><tbody>
+        <tr><td>Revenue</td><td>$1,284,600</td></tr>
+        <tr><td class="sub">Cost of sales</td><td>−$612,300</td></tr>
+        <tr><td><b>Gross profit</b></td><td>$672,300</td></tr>
+        <tr><td class="sub">Salaries</td><td>−$288,000</td></tr>
+        <tr><td class="sub">Rent and utilities</td><td>−$64,200</td></tr>
+        <tr><td class="sub">Marketing</td><td>−$41,800</td></tr>
+        <tr><td class="sub">Other expenses</td><td>−$41,900</td></tr>
+        <tr class="tot"><td>Net profit</td><td class="g">$236,400</td></tr>
+      </tbody></table></section>
+  </div>
+  <div class="row3">
+    <section class="card" aria-labelledby="i-t"><div class="card-h"><h2 id="i-t">Invoices</h2><div class="tabs" role="group" aria-label="Filter invoices" id="flt"><button type="button" aria-pressed="true" data-f="all">All</button><button type="button" aria-pressed="false" data-f="due">Due</button><button type="button" aria-pressed="false" data-f="overdue">Overdue</button><button type="button" aria-pressed="false" data-f="paid">Paid</button></div></div>
+      <div class="tw"><table class="inv"><thead><tr><th scope="col">Invoice</th><th scope="col">Client</th><th scope="col">Due date</th><th scope="col">Amount</th><th scope="col">Status</th></tr></thead><tbody id="inv"></tbody></table></div></section>
+    <section class="card" aria-labelledby="e-t"><div class="card-h"><h2 id="e-t">Expenses by category</h2></div><div class="donut"><svg id="donut" viewBox="0 0 42 42" role="img" aria-label="Donut chart of expenses by category"></svg><ul id="elist"></ul></div></section>
+    <section class="card" aria-labelledby="b-t"><div class="card-h"><h2 id="b-t">Bank accounts</h2></div>
+      <div class="bank"><div><b>Business current</b><small>•••• 4417</small></div><strong>$128,940</strong></div>
+      <div class="bank"><div><b>Tax savings</b><small>•••• 2093</small></div><strong>$62,400</strong></div>
+      <div class="bank"><div><b>USD card</b><small>•••• 7731</small></div><strong>$23,040</strong></div>
+      <div class="bills"><h2 style="margin-bottom:6px">Bills due soon</h2><div class="bill"><span>Payroll</span><b>Oct 28 · $24,000</b></div><div class="bill"><span>Office rent</span><b>Nov 1 · $5,350</b></div><div class="bill"><span>Sales tax (Q3)</span><b>Nov 15 · $18,720</b></div></div></section>
+  </div>
+  <p class="foot">Tallybook finance dashboard, a <a href="https://mmrahmanbappi.github.io/free-html-templates/">free HTML template</a>. Sample data only. Photo: <a href="https://unsplash.com" rel="noopener">Unsplash</a>. © <span id="yr">2026</span></p>
+</main>
+<script>
+const I=[["INV-1048","Harbor Dental Group","Oct 30",8400,"due"],["INV-1047","City Parks Council","Oct 12",12300,"overdue"],["INV-1046","Oakline Furniture","Oct 20",5260,"paid"],["INV-1045","Riverside Homes","Nov 4",14800,"due"],["INV-1044","Kestrel Build","Oct 02",9120,"paid"],["INV-1043","Maple School","Nov 10",6040,"due"]];
+const fm=n=>'$'+n.toLocaleString('en-US');
+function inv(f){document.getElementById('inv').innerHTML=I.filter(x=>f==='all'||x[4]===f).map(x=>`<tr><td><b>${x[0]}</b></td><td>${x[1]}</td><td>${x[2]}</td><td><b>${fm(x[3])}</b></td><td><span class="chip c-${x[4]}">${x[4][0].toUpperCase()+x[4].slice(1)}</span></td></tr>`).join('')}
+document.querySelectorAll('#flt button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#flt button').forEach(x=>x.setAttribute('aria-pressed',x===b));inv(b.dataset.f)}));inv('all');
+const E=[["Salaries",60,"#1F2933"],["Materials",18,"#059669"],["Rent",9,"#2563EB"],["Marketing",8,"#D97706"],["Other",5,"#CBD2D9"]];let o=25,d='';
+E.forEach(e=>{d+=`<circle cx="21" cy="21" r="15.9" fill="none" stroke="${e[2]}" stroke-width="6" stroke-dasharray="${e[1]} ${100-e[1]}" stroke-dashoffset="${o}"/>`;o-=e[1]});
+d+='<text x="21" y="21" text-anchor="middle" font-size="4.6" font-weight="800" fill="#1F2933">$436k</text><text x="21" y="26" text-anchor="middle" font-size="2.6" fill="#6B7580">this year</text>';
+document.getElementById('donut').innerHTML=d;document.getElementById('elist').innerHTML=E.map(e=>`<li><span><i style="background:${e[2]}"></i>${e[0]}</span><b>${e[1]}%</b></li>`).join('');
+const M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct"],IN=[82,88,104,118,126,139,144,131,122,130],OUT=[74,79,86,92,98,104,110,105,99,112];
+function cash(){const s=document.getElementById('cash'),W=s.clientWidth||700,H=250,pl=40,pb=24,mx=160,bw=(W-pl)/M.length;let g='';
+for(let j=0;j<=4;j++){const y=H-pb-(H-pb-10)*j/4;g+=`<line x1="${pl}" x2="${W}" y1="${y}" y2="${y}" stroke="#E4E7EB"/><text x="${pl-6}" y="${y+4}" text-anchor="end" font-size="11" fill="#6B7580">$${mx*j/4}k</text>`}
+const Y=v=>H-pb-(H-pb-10)*v/mx;let net='';
+M.forEach((m,i)=>{const x=pl+i*bw+bw*.15,w=bw*.33;g+=`<rect x="${x}" y="${Y(IN[i])}" width="${w}" height="${H-pb-Y(IN[i])}" rx="4" fill="#059669"><title>${m} in: $${IN[i]}k</title></rect><rect x="${x+w+2}" y="${Y(OUT[i])}" width="${w}" height="${H-pb-Y(OUT[i])}" rx="4" fill="#FDA4B8"><title>${m} out: $${OUT[i]}k</title></rect><text x="${x+w}" y="${H-7}" text-anchor="middle" font-size="11" fill="#6B7580">${m}</text>`;
+net+=(i?'L':'M')+(x+w)+' '+Y((IN[i]-OUT[i])*3)});
+g+=`<path d="${net}" fill="none" stroke="#1F2933" stroke-width="2.5" stroke-dasharray="1 0"/>`;s.setAttribute('viewBox',`0 0 ${W} ${H}`);s.innerHTML=g}
+cash();window.addEventListener('resize',cash);
+</script>

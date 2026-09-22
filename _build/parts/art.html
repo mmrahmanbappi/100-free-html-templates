@@ -1,0 +1,35 @@
+<header class="wrap"><nav class="nav" aria-label="Main"><a href="#" class="logo">Mira<span>.</span>Solis</a><ul class="menu" id="menu"><li><a href="#work">Work</a></li><li><a href="#shop">Print shop</a></li><li><a href="#commissions">Commissions</a></li><li><a href="#faq">FAQ</a></li></ul><a href="#shop" class="btn btn-y">Cart (<span id="cc">0</span>)</a><button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button></nav></header>
+<main id="main">
+<section class="hero" aria-labelledby="h1"><div class="wrap hg"><div><h1 id="h1">Bright shapes for <em>happy</em> walls.</h1><p>I'm Mira, an illustrator in Valencia. I make bold, colourful art for homes, books, brands and murals, and I sell signed prints of my favourite pieces.</p><div class="ac"><a href="#shop" class="btn btn-i">Shop prints</a><a href="#commissions" class="btn">Commission a piece</a></div></div>
+<div class="stack" aria-hidden="true"><div class="a a1" data-art="0"></div><div class="a a2" data-art="3"></div><div class="a a3" data-art="5"></div></div></div></section>
+<section id="work" aria-labelledby="w1" style="padding-top:20px"><div class="wrap"><div class="sh"><h2 id="w1">Recent work</h2><p style="color:var(--mu);max-width:40ch;margin:0">Click any piece to see it larger. All artwork on this page is drawn in code, so you can swap in your own images.</p></div><div class="gal" id="gal"></div></div></section>
+<section class="shop" id="shop" aria-labelledby="s1"><div class="wrap"><div class="sh"><h2 id="s1">Print shop</h2><p style="max-width:40ch;margin:0">Giclée prints on 300 gsm cotton paper, signed and numbered. Frames not included.</p></div><div class="pg" id="pg"></div></div></section>
+<section id="commissions" aria-labelledby="c1"><div class="wrap com"><div><h2 id="c1">Commission a piece</h2><p>Custom illustrations for your home, a book cover, a wedding or your brand. I take on four commissions a month.</p><ol class="steps"><li><b>1</b><span>Tell me your idea and the size you need.</span></li><li><b>2</b><span>I send two sketches within a week.</span></li><li><b>3</b><span>You choose one, and I paint the final piece.</span></li><li><b>4</b><span>Delivered as a print or a high-resolution file.</span></li></ol></div>
+<form action="https://formspree.io/f/your-form-id" method="POST" aria-label="Commission request"><label for="n">Your name</label><input id="n" name="name" required><label for="e">Email</label><input id="e" name="email" type="email" required>
+<label for="t">Type of piece</label><select id="t" name="type"><option data-p="180">Personal print (A3)</option><option data-p="320">Large wall piece (A1)</option><option data-p="450">Book cover</option><option data-p="900">Brand illustration set</option></select>
+<div class="est" aria-live="polite">Starting price: €<span id="est">180</span></div><label for="m">Your idea</label><textarea id="m" name="message" rows="3"></textarea><button class="btn btn-i" type="submit" style="width:100%;justify-content:center">Send request</button></form></div></section>
+<section id="faq" aria-labelledby="f1" style="padding-top:0"><div class="wrap" style="max-width:820px"><h2 id="f1" style="font-size:52px;margin-bottom:10px">Questions</h2><div class="faq">
+<details open><summary>How long does a print take to arrive?</summary><p>Prints are made to order and ship in 3 to 5 working days, rolled in a strong tube. Europe delivery takes 2 to 4 days.</p></details>
+<details><summary>Can I use your art for my business?</summary><p>Yes, with a licence. Prices depend on how and where the art is used. Send me a message with details.</p></details>
+<details><summary>Do you ship worldwide?</summary><p>Yes. Delivery is free in Spain and €8 to the rest of the world.</p></details></div></div></section>
+</main>
+<footer><div class="wrap ft"><span>© <span id="yr">2026</span> Mira Solis Studio</span><span>Artwork drawn in SVG · <a href="https://mmrahmanbappi.github.io/free-html-templates/">Free HTML Templates</a></span></div></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Artwork viewer"><button type="button" id="lx" aria-label="Close">×</button><div class="fr" id="lf"></div><p id="lt" style="font-weight:700"></p></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const C=["#2B2D6E","#EF476F","#FFD166","#06A77D","#118AB2","#F78C6B","#FFF8EE"];
+const W=[["Sunday market","2026"],["Swimmers","2026"],["Lemon tree","2025"],["City at noon","2025"],["Two cats","2025"],["Balcony garden","2024"],["Night bus","2024"],["Paper boats","2024"]];
+function art(s){let r=s*9301+49297,x='';const n=()=>(r=(r*9301+49297)%233280)/233280;const bg=C[s%6];x+=`<rect width="200" height="200" fill="${bg}"/>`;
+for(let i=0;i<7;i++){const c=C[(s+i+1)%7],t=Math.floor(n()*3),X=n()*200,Y=n()*200,R=18+n()*46;
+if(t===0)x+=`<circle cx="${X}" cy="${Y}" r="${R}" fill="${c}"/>`;else if(t===1)x+=`<rect x="${X-R}" y="${Y-R/2}" width="${R*2}" height="${R}" rx="${R/2}" fill="${c}" transform="rotate(${n()*90} ${X} ${Y})"/>`;else x+=`<path d="M${X} ${Y-R}L${X+R} ${Y+R}L${X-R} ${Y+R}Z" fill="${c}"/>`}
+return `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${W[s][0]}, abstract illustration">${x}</svg>`}
+const $=id=>document.getElementById(id);document.querySelectorAll('[data-art]').forEach(el=>el.innerHTML=art(+el.dataset.art));
+$('gal').innerHTML=W.map((w,i)=>`<button type="button" data-i="${i}">${art(i)}<b>${w[0]}</b><small>Gouache and digital, ${w[1]}</small></button>`).join('');
+$('gal').onclick=e=>{const b=e.target.closest('[data-i]');if(!b)return;$('lf').innerHTML=art(+b.dataset.i);$('lt').textContent=W[b.dataset.i][0];$('lb').classList.add('on');$('lx').focus()};
+$('lx').onclick=()=>$('lb').classList.remove('on');document.addEventListener('keydown',e=>{if(e.key==='Escape')$('lb').classList.remove('on')});
+const S=[["A4",35],["A3",55],["A2",85]];let cc=0;
+$('pg').innerHTML=[0,2,4].map(i=>`<article class="pr"><div class="art">${art(i)}</div><h3>${W[i][0]}</h3><div class="sz" role="group" aria-label="Print size" data-i="${i}">${S.map((s,k)=>`<button type="button" aria-pressed="${k===1}" data-p="${s[1]}">${s[0]}</button>`).join('')}</div><div class="rw"><span class="am">€<span id="p${i}">55</span></span><button class="add" type="button" data-n="${W[i][0]}">Add to cart</button></div></article>`).join('');
+$('pg').onclick=e=>{const s=e.target.closest('[data-p]');if(s){const g=s.parentElement;g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===s));$('p'+g.dataset.i).textContent=s.dataset.p;return}
+const a=e.target.closest('.add');if(!a)return;cc++;$('cc').textContent=cc;const t=$('toast');t.textContent=a.dataset.n+' print added';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000)};
+$('t').onchange=e=>{$('est').textContent=e.target.selectedOptions[0].dataset.p};
+</script>
