@@ -161,7 +161,7 @@ footer{border-top:1px solid var(--ln);padding:30px 0;font-size:14px;color:var(--
 <form action="https://formspree.io/f/your-form-id" method="POST" aria-label="Booking request"><label>Name<input name="name" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Type of shoot<select name="type"><option>Portrait</option><option>Wedding</option><option>Commercial</option></select></label><label>Date<input name="date" type="date"></label><label>Message<textarea name="message" rows="4"></textarea></label><button class="btn f" type="submit">Send request</button></form></div></section>
 </main>
 <footer><div class="wrap ft"><span>© <span id="yr">2026</span> Nils Aurora Photography</span><span>Photos: <a href="https://unsplash.com" rel="noopener">Unsplash</a> | <a href="https://mmrahmanbappi.github.io/free-html-templates/">Free HTML Templates</a></span></div></footer>
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="x" type="button" id="lx" aria-label="Close">×</button><button class="pv" type="button" id="lp" aria-label="Previous photo">‹</button><img id="li" src="" alt=""><button class="nx" type="button" id="ln" aria-label="Next photo">›</button><p id="lc"></p></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="x" type="button" id="lx" aria-label="Close">×</button><button class="pv" type="button" id="lp" aria-label="Previous photo">‹</button><img id="li" alt=""><button class="nx" type="button" id="ln" aria-label="Next photo">›</button><p id="lc"></p></div>
 <script>
 const G=[["1470071459604-3b5ec3a7fe05","Landscape","Morning mist, Senja",900,600],["1483985988355-763728e1935b","Portrait","Winter coat, Oslo",700,1000],["1441974231531-c6227db76b6e","Landscape","Forest path, Lyngen",900,600],["1509631179647-0177331693ae","Portrait","Colour study, Bergen",700,1000],["1492691527719-9d1e07e534b4","Landscape","Above the clouds",900,600],["1445205170230-053b83016050","Street","Market rail, Copenhagen",900,700],["1451187580459-43490279c0fa","Landscape","Night lights from above",900,600],["1515886657613-9f3515b0c78f","Street","Yellow, Stockholm",700,900],["1506905925346-21bda4d32df4","Landscape","Peaks at sunrise",900,600]];
 const $=id=>document.getElementById(id);let cur=[],idx=0;
@@ -173,10 +173,10 @@ const close=()=>$('lb').classList.remove('on');$('lx').onclick=close;$('lp').onc
 document.addEventListener('keydown',e=>{if(!$('lb').classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1)});
 </script>
 <script>
-const b=document.querySelector('.burger'),m=document.getElementById('menu');
-b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
-document.getElementById('yr').textContent=new Date().getFullYear();
+(()=>{const b=document.querySelector('.burger'),m=document.getElementById('menu'),y=document.getElementById('yr');
+if(b&&m){b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}))}
+if(y)y.textContent=new Date().getFullYear()})();
 </script>
 </body>
 </html>

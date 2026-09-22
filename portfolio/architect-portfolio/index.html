@@ -134,6 +134,7 @@ footer{background:var(--k);color:#77756F;font-size:14px;padding:0 0 30px}.ft{dis
 @media(max-width:980px){.menu{display:none}.burger{display:block}.menu.open{display:flex;flex-direction:column;position:absolute;top:78px;left:0;right:0;background:var(--cn);padding:20px 28px;gap:14px;border-bottom:1px solid var(--ln)}
 .hd{position:relative}.hr,.plist{grid-template-columns:1fr}.nums{justify-content:flex-start}.prev{display:none}.svc{grid-template-columns:1fr 1fr}.ct .g{grid-template-columns:1fr}}
 @media(max-width:560px){.row{grid-template-columns:40px 1fr}.row span:last-child,.row span:nth-child(3){display:none}.svc{grid-template-columns:1fr}.svc div{padding-left:0!important;border-right:0;border-bottom:1px solid var(--ln)}.aw li{grid-template-columns:1fr}}
+.ct h2 a{overflow-wrap:anywhere}.row h3{overflow-wrap:anywhere}
 
 </style>
 </head>
@@ -161,10 +162,10 @@ const prev=e=>{const r=e.target.closest('.row');if(!r)return;const p=P[r.dataset
 $('rows').addEventListener('mouseover',prev);$('rows').addEventListener('focusin',prev);
 </script>
 <script>
-const b=document.querySelector('.burger'),m=document.getElementById('menu');
-b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
-document.getElementById('yr').textContent=new Date().getFullYear();
+(()=>{const b=document.querySelector('.burger'),m=document.getElementById('menu'),y=document.getElementById('yr');
+if(b&&m){b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}))}
+if(y)y.textContent=new Date().getFullYear()})();
 </script>
 </body>
 </html>

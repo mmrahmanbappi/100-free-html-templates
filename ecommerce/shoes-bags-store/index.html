@@ -175,10 +175,10 @@ $('grid').onclick=e=>{const s=e.target.closest('[data-s]');if(s){const g=s.paren
 const a=e.target.closest('[data-add]');if(!a)return;const i=a.dataset.add;if(P[i][4]&&!sel[i]){$('m'+i).textContent='Please choose a size first';return}cc++;$('cc').textContent=cc;$('m'+i).textContent='Added'+(sel[i]?' in EU '+sel[i]:'')+' ✓'};
 </script>
 <script>
-const b=document.querySelector('.burger'),m=document.getElementById('menu');
-b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
-document.getElementById('yr').textContent=new Date().getFullYear();
+(()=>{const b=document.querySelector('.burger'),m=document.getElementById('menu'),y=document.getElementById('yr');
+if(b&&m){b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}))}
+if(y)y.textContent=new Date().getFullYear()})();
 </script>
 </body>
 </html>

@@ -163,10 +163,10 @@ img{max-width:100%;height:auto;display:block}a{color:inherit}h1,h2,h3{margin:0;c
 <p class="note">Online CV template, a <a href="https://mmrahmanbappi.github.io/free-html-templates/">free HTML template</a>. Photo: <a href="https://unsplash.com" rel="noopener">Unsplash</a>. The print button hides this note and the menu bar. © <span id="yr">2026</span></p>
 <script>document.getElementById('pr').onclick=()=>window.print();</script>
 <script>
-const b=document.querySelector('.burger'),m=document.getElementById('menu');
-b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
-document.getElementById('yr').textContent=new Date().getFullYear();
+(()=>{const b=document.querySelector('.burger'),m=document.getElementById('menu'),y=document.getElementById('yr');
+if(b&&m){b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}))}
+if(y)y.textContent=new Date().getFullYear()})();
 </script>
 </body>
 </html>

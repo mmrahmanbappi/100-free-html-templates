@@ -168,7 +168,7 @@ footer{border-top:1px solid var(--ln);padding:28px 0;color:var(--mu);font-size:1
 <form action="https://formspree.io/f/your-form-id" method="POST" aria-label="Contact form"><label class="skip" for="n">Name</label><input id="n" name="name" placeholder="Your name" required><label class="skip" for="e">Email</label><input id="e" name="email" type="email" placeholder="Email" required><label class="skip" for="l">Channel link</label><input id="l" name="channel" placeholder="Channel or website link"><label class="skip" for="m">Message</label><textarea id="m" name="message" rows="3" placeholder="What do you need edited?"></textarea><button class="btn" type="submit">Send</button></form></div></div></section>
 </main>
 <footer><div class="wrap ft"><span>© <span id="yr">2026</span> Kai Frame Studio</span><span>Photos: <a href="https://unsplash.com" rel="noopener">Unsplash</a> | <a href="https://mmrahmanbappi.github.io/free-html-templates/">Free HTML Templates</a></span></div></footer>
-<div class="md" id="md" role="dialog" aria-modal="true" aria-label="Video player"><div class="box"><img id="mi" src="" alt=""><p id="mt"></p><button type="button" id="mx" aria-label="Close video">×</button></div></div>
+<div class="md" id="md" role="dialog" aria-modal="true" aria-label="Video player"><div class="box"><img id="mi" alt=""><p id="mt"></p><button type="button" id="mx" aria-label="Close video">×</button></div></div>
 <script>
 const V=[["How I edit a 20-minute video in 3 hours","YouTube","18:24","1.2M views","1574717024653-61fd2cf4d44d"],["Mountain brand film for Summit Tours","Brand","1:30","Client project","1492691527719-9d1e07e534b4"],["5 cuts every beginner should learn","Shorts","0:58","3.4M views","1516321318423-f06f85e504b3"],["Colour grading a travel vlog","YouTube","14:02","640K views","1506905925346-21bda4d32df4"],["Headphones launch ad","Brand","0:45","Client project","1583394838336-acd977736f90"],["Sound design in 60 seconds","Shorts","0:59","2.1M views","1470071459604-3b5ec3a7fe05"]];
 const $=id=>document.getElementById(id);
@@ -179,10 +179,10 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(b&
 $('mx').onclick=()=>$('md').classList.remove('on');document.addEventListener('keydown',e=>{if(e.key==='Escape')$('md').classList.remove('on')});
 </script>
 <script>
-const b=document.querySelector('.burger'),m=document.getElementById('menu');
-b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
-document.getElementById('yr').textContent=new Date().getFullYear();
+(()=>{const b=document.querySelector('.burger'),m=document.getElementById('menu'),y=document.getElementById('yr');
+if(b&&m){b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}))}
+if(y)y.textContent=new Date().getFullYear()})();
 </script>
 </body>
 </html>

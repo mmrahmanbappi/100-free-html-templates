@@ -167,6 +167,7 @@ td{padding:10px;border-bottom:1px solid var(--line)}
 @media (max-width:1200px){.kpis{grid-template-columns:repeat(3,1fr)}.row,.row2{grid-template-columns:1fr}}
 @media (max-width:860px){.app{grid-template-columns:1fr}.side{position:fixed;left:0;top:0;width:250px;z-index:30;transform:translateX(-100%);transition:transform .25s}.side.open{transform:none}.menu-btn{display:block}.shift{display:none}.main{padding:16px 12px}}
 @media (max-width:560px){.kpis{grid-template-columns:1fr 1fr}.ward{grid-template-columns:100px 1fr 60px}}
+.card{min-width:0}.tabs{flex-wrap:wrap}.row>*,.row2>*{min-width:0}
 
 </style>
 </head>
@@ -229,10 +230,10 @@ v.forEach((x,i)=>{o+=`<circle cx="${X(i)}" cy="${Y(x)}" r="3.5" fill="#fff" stro
 s.setAttribute('viewBox',`0 0 ${w} ${h}`);s.innerHTML=o}adm();window.addEventListener('resize',adm);
 </script>
 <script>
-const b=document.querySelector('.burger'),m=document.getElementById('menu');
-b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
-document.getElementById('yr').textContent=new Date().getFullYear();
+(()=>{const b=document.querySelector('.burger'),m=document.getElementById('menu'),y=document.getElementById('yr');
+if(b&&m){b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}))}
+if(y)y.textContent=new Date().getFullYear()})();
 </script>
 </body>
 </html>

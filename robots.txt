@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mmrahmanbappi.github.io/free-html-templates/sitemap.xml
