@@ -4,7 +4,7 @@ A calm, trustworthy website for a business or management consultant. It explains
 
 ![Halden & Rowe, a free consulting firm website template](screenshot.png)
 
-**[See the live demo](https://mmrahmanbappi.github.io/free-html-templates/business/consulting-firm/)** &nbsp;|&nbsp; **[Download ZIP](https://github.com/mmrahmanbappi/free-html-templates/archive/refs/heads/main.zip)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/free-html-templates/)
+**[See the live demo and download it free](https://mmrahmanbappi.github.io/free-html-templates/business/consulting-firm/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/free-html-templates/)
 
 ## What you get
 
@@ -35,7 +35,7 @@ A calm, trustworthy website for a business or management consultant. It explains
 
 ## How to make it yours
 
-1. Download `index.html`, or download the whole collection as a ZIP.
+1. Open the [live demo](https://mmrahmanbappi.github.io/free-html-templates/business/consulting-firm/) and click **Download this template (free)** in the black bar at the top.
 2. Open the file in a text editor (VS Code, Sublime Text or Notepad++).
 3. Delete the black notice bar at the top. Look for the comment `Template notice bar` and remove that block.
 4. Change the business name, text, phone number, email and address.
