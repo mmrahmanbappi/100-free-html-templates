@@ -9,4 +9,4 @@ In short:
 - Give and take feedback politely.
 - No harassment, insults or personal attacks.
 
-If someone breaks these rules, contact the maintainer at mmrahmanbappi@users.noreply.github.com or through [GitHub](https://github.com/mmrahmanbappi). Reports are kept private.
+If someone breaks these rules, contact the maintainer privately through [his GitHub profile](https://github.com/mmrahmanbappi). Reports are kept private.
