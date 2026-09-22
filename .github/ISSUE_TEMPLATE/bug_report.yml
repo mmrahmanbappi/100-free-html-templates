@@ -1,0 +1,28 @@
+name: Bug report
+description: Something looks broken or doesn't work
+labels: ["bug"]
+body:
+  - type: input
+    id: template
+    attributes:
+      label: Which template?
+      placeholder: e.g. restaurant/bakery
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What went wrong?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options: ["Phone", "Tablet", "Desktop"]
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: e.g. Chrome 128 on Android

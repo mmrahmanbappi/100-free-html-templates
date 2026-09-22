@@ -1,0 +1,16 @@
+name: Template request
+description: Ask for a new kind of website template
+labels: ["template request"]
+body:
+  - type: input
+    id: kind
+    attributes:
+      label: What kind of website?
+      placeholder: e.g. dog grooming salon
+    validations:
+      required: true
+  - type: textarea
+    id: features
+    attributes:
+      label: What should it include?
+      description: Sections or features you need, like booking, prices or a gallery.
