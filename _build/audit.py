@@ -1,5 +1,5 @@
 import re,json,hashlib,urllib.request,glob,xml.etree.ElementTree as ET
-BASE='https://mmrahmanbappi.github.io/free-html-templates/'
+BASE='https://mmrahmanbappi.github.io/100-free-html-templates/'
 def get(u):
     try:
         r=urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0 (compatible; Googlebot/2.1)'}),timeout=30);return r.status,r.read()

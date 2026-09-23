@@ -1,5 +1,5 @@
 import json, sys
-BASE="https://mmrahmanbappi.github.io/free-html-templates/"; REPO="https://github.com/mmrahmanbappi/free-html-templates"
+BASE="https://mmrahmanbappi.github.io/100-free-html-templates/"; REPO="https://github.com/mmrahmanbappi/100-free-html-templates"
 def head(cat,slug,title,desc,og,kw,color,kind,favicon,fonts,catname="Business Templates"):
     url=f"{BASE}{cat}/{slug}/"; img=url+"screenshot.png"
     g={"@context":"https://schema.org","@graph":[

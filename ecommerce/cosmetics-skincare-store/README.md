@@ -4,7 +4,7 @@ A soft, calm skincare brand store. A working 3-question skin quiz suggests a per
 
 ![Dewline, a free skincare and cosmetics store website template](screenshot.png)
 
-**[See the live demo and download it free](https://mmrahmanbappi.github.io/free-html-templates/ecommerce/cosmetics-skincare-store/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/free-html-templates/)
+**[See the live demo and download it free](https://mmrahmanbappi.github.io/100-free-html-templates/ecommerce/cosmetics-skincare-store/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/100-free-html-templates/)
 
 ## What you get
 
@@ -33,7 +33,7 @@ A soft, calm skincare brand store. A working 3-question skin quiz suggests a per
 
 ## How to make it yours
 
-1. Open the [live demo](https://mmrahmanbappi.github.io/free-html-templates/ecommerce/cosmetics-skincare-store/) and click **Download this template (free)** in the black bar at the top.
+1. Open the [live demo](https://mmrahmanbappi.github.io/100-free-html-templates/ecommerce/cosmetics-skincare-store/) and click **Download this template (free)** in the black bar at the top.
 2. Open the file in a text editor (VS Code, Sublime Text or Notepad++).
 3. Delete the black notice bar at the top. Look for the comment `Template notice bar` and remove that block.
 4. Change the business name, text, phone number, email and address.

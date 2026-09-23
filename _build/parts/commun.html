@@ -16,7 +16,7 @@
 
 <section class="find" id="find" aria-labelledby="f1"><div class="wrap"><img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=900&q=75&auto=format&fit=crop" alt="People chatting at a busy indoor community event with string lights" width="900" height="600" loading="lazy"><div><h2 id="f1" style="font-size:clamp(32px,4vw,48px)">Find us</h2><p>14 Maple Street, Riverside, RV2 8LT. Bus 12 and 38 stop outside. Step-free entrance, accessible toilets and a hearing loop in the main hall.</p><p>Café open Monday to Saturday, 9am to 3pm. Call 01632 960 771 or email hello@maplestreet.example.org.</p></div></div></section>
 </main>
-<footer><div class="wrap"><p>© <span id="yr"></span> Maple Street Community Centre, run by volunteers</p><p><a href="https://unsplash.com">Photos: Unsplash</a> &nbsp;|&nbsp; <a href="https://mmrahmanbappi.github.io/free-html-templates/">More free templates</a></p></div></footer>
+<footer><div class="wrap"><p>© <span id="yr"></span> Maple Street Community Centre, run by volunteers</p><p><a href="https://unsplash.com">Photos: Unsplash</a> &nbsp;|&nbsp; <a href="https://mmrahmanbappi.github.io/100-free-html-templates/">More free templates</a></p></div></footer>
 <script>
 (()=>{const $=id=>document.getElementById(id);
 const H=[[9,21],[9,21],[9,21],[9,21],[9,22],[9,17],[10,16]],n=new Date(),di=(n.getDay()+6)%7,h=n.getHours()+n.getMinutes()/60,o=h>=H[di][0]&&h<H[di][1];$('od').classList.toggle('c',!o);$('ot').textContent=o?'Open now':'Closed now';$('oh').textContent=o?`Until ${H[di][1]>12?H[di][1]-12+'pm':H[di][1]+'am'} today`:`Opens ${H[(di+(h>=H[di][1]?1:0))%7][0]}am ${h>=H[di][1]?'tomorrow':'today'}`;

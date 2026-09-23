@@ -4,7 +4,7 @@ An easy-to-read school management dashboard using an extra-legible font. It show
 
 ![Classio, a free school management dashboard website template](screenshot.png)
 
-**[See the live demo and download it free](https://mmrahmanbappi.github.io/free-html-templates/admin-dashboard/school-management/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/free-html-templates/)
+**[See the live demo and download it free](https://mmrahmanbappi.github.io/100-free-html-templates/admin-dashboard/school-management/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/100-free-html-templates/)
 
 ## What you get
 
@@ -32,7 +32,7 @@ An easy-to-read school management dashboard using an extra-legible font. It show
 
 ## How to make it yours
 
-1. Open the [live demo](https://mmrahmanbappi.github.io/free-html-templates/admin-dashboard/school-management/) and click **Download this template (free)** in the black bar at the top.
+1. Open the [live demo](https://mmrahmanbappi.github.io/100-free-html-templates/admin-dashboard/school-management/) and click **Download this template (free)** in the black bar at the top.
 2. Open the file in a text editor (VS Code, Sublime Text or Notepad++).
 3. Delete the black notice bar at the top. Look for the comment `Template notice bar` and remove that block.
 4. Change the business name, text, phone number, email and address.

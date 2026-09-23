@@ -4,7 +4,7 @@ A trustworthy law firm in oxblood and stone with a classic serif. Pick a practic
 
 ![Hartley & Okafor, a free law firm website template](screenshot.png)
 
-**[See the live demo and download it free](https://mmrahmanbappi.github.io/free-html-templates/local-services/law-firm/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/free-html-templates/)
+**[See the live demo and download it free](https://mmrahmanbappi.github.io/100-free-html-templates/local-services/law-firm/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/100-free-html-templates/)
 
 ## What you get
 
@@ -30,7 +30,7 @@ A trustworthy law firm in oxblood and stone with a classic serif. Pick a practic
 
 ## How to make it yours
 
-1. Open the [live demo](https://mmrahmanbappi.github.io/free-html-templates/local-services/law-firm/) and click **Download this template (free)** in the black bar at the top.
+1. Open the [live demo](https://mmrahmanbappi.github.io/100-free-html-templates/local-services/law-firm/) and click **Download this template (free)** in the black bar at the top.
 2. Open the file in a text editor (VS Code, Sublime Text or Notepad++).
 3. Delete the black notice bar at the top. Look for the comment `Template notice bar` and remove that block.
 4. Change the business name, text, phone number, email and address.

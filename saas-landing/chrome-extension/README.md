@@ -4,7 +4,7 @@ A bold, playful landing page for a browser extension. A browser window built in 
 
 ![Tabnook, a free chrome extension website template](screenshot.png)
 
-**[See the live demo and download it free](https://mmrahmanbappi.github.io/free-html-templates/saas-landing/chrome-extension/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/free-html-templates/)
+**[See the live demo and download it free](https://mmrahmanbappi.github.io/100-free-html-templates/saas-landing/chrome-extension/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/100-free-html-templates/)
 
 ## What you get
 
@@ -34,7 +34,7 @@ A bold, playful landing page for a browser extension. A browser window built in 
 
 ## How to make it yours
 
-1. Open the [live demo](https://mmrahmanbappi.github.io/free-html-templates/saas-landing/chrome-extension/) and click **Download this template (free)** in the black bar at the top.
+1. Open the [live demo](https://mmrahmanbappi.github.io/100-free-html-templates/saas-landing/chrome-extension/) and click **Download this template (free)** in the black bar at the top.
 2. Open the file in a text editor (VS Code, Sublime Text or Notepad++).
 3. Delete the black notice bar at the top. Look for the comment `Template notice bar` and remove that block.
 4. Change the business name, text, phone number, email and address.

@@ -4,7 +4,7 @@ A clean landing page for an API or developer tool. It has code examples with wor
 
 ![Sendwell, a free developer tool and api website template](screenshot.png)
 
-**[See the live demo and download it free](https://mmrahmanbappi.github.io/free-html-templates/saas-landing/developer-api/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/free-html-templates/)
+**[See the live demo and download it free](https://mmrahmanbappi.github.io/100-free-html-templates/saas-landing/developer-api/)** &nbsp;|&nbsp; [More free templates](https://mmrahmanbappi.github.io/100-free-html-templates/)
 
 ## What you get
 
@@ -35,7 +35,7 @@ A clean landing page for an API or developer tool. It has code examples with wor
 
 ## How to make it yours
 
-1. Open the [live demo](https://mmrahmanbappi.github.io/free-html-templates/saas-landing/developer-api/) and click **Download this template (free)** in the black bar at the top.
+1. Open the [live demo](https://mmrahmanbappi.github.io/100-free-html-templates/saas-landing/developer-api/) and click **Download this template (free)** in the black bar at the top.
 2. Open the file in a text editor (VS Code, Sublime Text or Notepad++).
 3. Delete the black notice bar at the top. Look for the comment `Template notice bar` and remove that block.
 4. Change the business name, text, phone number, email and address.

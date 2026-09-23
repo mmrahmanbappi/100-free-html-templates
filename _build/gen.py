@@ -1,6 +1,6 @@
 import json, html, datetime
-BASE="https://mmrahmanbappi.github.io/free-html-templates/"
-REPO="https://github.com/mmrahmanbappi/free-html-templates"
+BASE="https://mmrahmanbappi.github.io/100-free-html-templates/"
+REPO="https://github.com/mmrahmanbappi/100-free-html-templates"
 D=json.load(open('themes.json')); root='/home/claude/fht/'
 T=D['themes']; C=D['categories']; e=html.escape
 N=len(T); YEAR=datetime.date.today().year

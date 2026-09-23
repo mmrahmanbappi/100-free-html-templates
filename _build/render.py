@@ -1,6 +1,6 @@
 import glob,asyncio
 from playwright.async_api import async_playwright
-BASE='https://mmrahmanbappi.github.io/free-html-templates/'
+BASE='https://mmrahmanbappi.github.io/100-free-html-templates/'
 ALL=[f.replace('/home/claude/fht/','').replace('index.html','') for f in sorted(glob.glob('/home/claude/fht/**/index.html',recursive=True))]
 import sys
 a,z=int(sys.argv[1]),int(sys.argv[2]);pages=ALL[a:z]
