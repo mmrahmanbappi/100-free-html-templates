@@ -260,16 +260,59 @@ function wall(array $ts, callable $prefix): string {
     }
     return "<div class=\"wall\" aria-hidden=\"true\">{$out}</div>";
 }
+// ---- SEO helpers: keep titles within 60 characters and descriptions within 110 to 160 ----
+function mm_trim_stop(array $w): array { $stop = ['and','with','for','in','of','the','a','an','to','&','on','by','your','or']; while ($w && in_array(strtolower(end($w)), $stop, true)) array_pop($w); return $w; }
+function mm_clean(string $t): string {
+    $t = trim($t);
+    if (substr_count($t, '(') > substr_count($t, ')')) $t = trim(substr($t, 0, strrpos($t, '(')));
+    $w = mm_trim_stop(explode(' ', $t)); $t = implode(' ', $w);
+    return rtrim($t, " ,;:-");
+}
+function mm_title(string $t): string {
+    if (mb_strlen($t) <= 60) return $t;
+    while (mb_strlen($t) > 60 && preg_match('/\s*\([^()]*\)/', $t)) {
+        preg_match_all('/\s*\([^()]*\)/', $t, $m, PREG_OFFSET_CAPTURE); $last = end($m[0]);
+        $t = trim(substr($t, 0, $last[1]) . substr($t, $last[1] + strlen($last[0])));
+    }
+    if (mb_strlen($t) <= 60) return mm_clean($t);
+    foreach ([': ', ' | ', ' - '] as $sep) {
+        $p = strpos($t, $sep);
+        if ($p !== false) {
+            $h = substr($t, 0, $p); $s = substr($t, $p + strlen($sep));
+            if (strpos($s, ',') !== false && mb_strlen($h) <= 60) return mm_clean($h);
+            $w = explode(' ', $s);
+            while ($w && mb_strlen($h . $sep . implode(' ', $w)) > 60) array_pop($w);
+            $r = mm_clean(implode(' ', $w));
+            if ($r !== '') return $h . $sep . $r;
+            $t = $h; break;
+        }
+    }
+    if (mb_strlen($t) <= 60) return mm_clean($t);
+    $w = explode(' ', $t); while ($w && mb_strlen(implode(' ', $w)) > 60) array_pop($w);
+    return mm_clean(implode(' ', $w));
+}
+function mm_desc(string $d, string $tail): string {
+    $d = trim($d);
+    if (mb_strlen($d) > 160) {
+        $cut = mb_substr($d, 0, 159); $p = mb_strrpos($cut, '. ');
+        if ($p !== false && $p > 100) $d = mb_substr($cut, 0, $p + 1);
+        else { $w = explode(' ', mb_substr($d, 0, 158)); array_pop($w); $d = rtrim(implode(' ', mm_trim_stop($w)), ',;:') . '.'; }
+    }
+    if (mb_strlen($d) < 110 && mb_strlen($d . ' ' . $tail) <= 160) $d .= ' ' . $tail;
+    return $d;
+}
 function page(string $title, string $desc, string $canon, string $h1, string $intro, string $crumb, string $body, array $graph, string $wall, string $stats, string $bar): string {
     global $BASE, $REPO, $T, $CSS, $JS, $MONTH, $MMCSS;
     $img = "{$BASE}{$T[0]['cat']}/{$T[0]['slug']}/screenshot.png";
+    $title = mm_title($title); $desc = mm_desc($desc, 'Free HTML templates, one file each, MIT license.');
+    $src = $img; $img = rtrim($canon, '/') . '/og.jpg';
     $et = e($title); $ed = e($desc); $ld = ld(['@context' => 'https://schema.org', '@graph' => $graph]); $ei = e($intro);
     return <<<HTML
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$et</title><meta name="description" content="$ed"><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="$canon">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Free HTML Templates"><meta property="og:title" content="$et"><meta property="og:description" content="$ed"><meta property="og:url" content="$canon">
-<meta property="og:image" content="$img"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="$et"><meta name="twitter:description" content="$ed"><meta name="twitter:image" content="$img">
+<meta property="og:image" content="$img"><meta property="og:image:alt" content="$et"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><link rel="image_src" href="$src"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="$et"><meta name="twitter:description" content="$ed"><meta name="twitter:image" content="$img">
 <meta name="theme-color" content="#16181F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316181F'/><text x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23FFC53D'>100</text></svg>">
@@ -332,8 +375,9 @@ $rd = "$N free HTML templates, one file each: " . (count($pl) > 1 ? implode(', '
 if (mb_strlen($rd) > 160) $rd = str_replace(' No coding needed.', '', $rd);
 if (mb_strlen($rd) > 160) $rd = "$N free HTML templates, one file each, for " . count($pl) . ' kinds of websites. No coding needed. Mobile friendly and SEO ready.';
 $graph = [
-    ['@type' => 'WebSite', '@id' => $BASE . '#website', 'url' => $BASE, 'name' => 'Free HTML Templates', 'description' => $rd, 'inLanguage' => 'en'],
-    ['@type' => 'CollectionPage', '@id' => $BASE, 'url' => $BASE, 'name' => $rt, 'description' => $rd, 'isPartOf' => ['@id' => $BASE . '#website'], 'mainEntity' => itemList($T, $BASE)],
+    ['@type' => 'WebSite', '@id' => $BASE . '#website', 'url' => $BASE, 'name' => 'Free HTML Templates', 'description' => $rd, 'inLanguage' => 'en', 'publisher' => ['@id' => $BASE . '#author']],
+    ['@type' => 'Person', '@id' => $BASE . '#author', 'name' => 'MM Rahman Bappi', 'url' => 'https://mmrahmanbappi.github.io/', 'sameAs' => ['https://github.com/mmrahmanbappi', 'https://mmseo.app/']],
+    ['@type' => 'CollectionPage', '@id' => $BASE, 'url' => $BASE, 'name' => $rt, 'description' => $rd, 'isPartOf' => ['@id' => $BASE . '#website'], 'author' => ['@id' => $BASE . '#author'], 'mainEntity' => itemList($T, $BASE)],
     faqLd($FAQ)];
 $h1 = "<span class='num'>$N</span>free website templates <span class='hl'>you can edit today</span>";
 file_put_contents($root . 'index.html', page($rt, $rd, $BASE, $h1, 'Each template is one HTML file. Open it, change the text and photos, and upload it. No WordPress, no page builder and no monthly fees. Free for personal and business use.', '', $body, $graph, wall($T, fn($t) => $t['cat'] . '/'), statsHtml($N, count($C)), barHtml(true)));
