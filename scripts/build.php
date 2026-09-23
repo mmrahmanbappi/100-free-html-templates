@@ -3,6 +3,25 @@
 // from scripts/themes.json. Run: php scripts/build.php
 declare(strict_types=1);
 mb_internal_encoding('UTF-8');
+$MMCSS = <<<'MMCSS'
+/* Shared look with mmrahmanbappi.github.io */
+:root{--ink:#171518;--ink2:#403b42;--mu:#5f5d61;--bg:#eeeeea;--card:#fff;--ln:#d9d8d2;--ac:#b23a0a;--ac2:#8f2f08;--yl:#ff7b4f;--h:"Inter",system-ui,sans-serif;--b:"Inter",system-ui,sans-serif;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--ink:#f2f1ed;--ink2:#d7d5d9;--mu:#a3a1a6;--bg:#141316;--card:#222126;--ln:#302f35;--ac:#ff7b4f;--ac2:#ff9670;color-scheme:dark}}
+h1,h2,h3{letter-spacing:-.035em}h1{font-weight:560!important}h2,h3{font-weight:600!important}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px)}
+.brand i{border-radius:50%!important}
+.top nav a.gh{border:1.5px solid var(--ink);border-radius:999px;padding:.35rem 1rem;color:var(--ink);font-weight:600}
+.btn{border-radius:999px!important}
+.idx{background:rgba(0,0,0,.6);color:#fff!important;padding:1px 7px;border-radius:6px}
+@media (prefers-color-scheme:dark){:root{--ac:#ff8a63}}
+.brand i{color:var(--bg)!important}.kick{background:var(--card)}.kick b{color:#fff}
+.btn{color:var(--bg)}.btn.l{background:var(--card)}.col a{background:var(--card)}.srch input{background:var(--card);color:var(--ink)}
+.chips button{background:var(--card);color:var(--ink)}.chips button[aria-pressed=true]{color:var(--bg)}.links a:first-child{color:var(--bg)}
+.none{background:var(--card)}.how div{color:var(--bg)}.faq details{background:var(--card)}
+.bar{background:color-mix(in srgb,var(--bg) 92%,transparent)!important}.chips button span{color:inherit!important;background:color-mix(in srgb,currentColor 14%,transparent)!important}
+.kick b{background:#b23a0a!important;color:#fff!important}
+@media (max-width:700px){.top nav a:not(.gh){display:none}}
+MMCSS;
 $root = dirname(__DIR__) . '/';
 $BASE = 'https://mmrahmanbappi.github.io/100-free-html-templates/';
 $REPO = 'https://github.com/mmrahmanbappi/100-free-html-templates';
@@ -242,7 +261,7 @@ function wall(array $ts, callable $prefix): string {
     return "<div class=\"wall\" aria-hidden=\"true\">{$out}</div>";
 }
 function page(string $title, string $desc, string $canon, string $h1, string $intro, string $crumb, string $body, array $graph, string $wall, string $stats, string $bar): string {
-    global $BASE, $REPO, $T, $CSS, $JS, $MONTH;
+    global $BASE, $REPO, $T, $CSS, $JS, $MONTH, $MMCSS;
     $img = "{$BASE}{$T[0]['cat']}/{$T[0]['slug']}/screenshot.png";
     $et = e($title); $ed = e($desc); $ld = ld(['@context' => 'https://schema.org', '@graph' => $graph]); $ei = e($intro);
     return <<<HTML
@@ -252,12 +271,12 @@ function page(string $title, string $desc, string $canon, string $h1, string $in
 <meta property="og:type" content="website"><meta property="og:site_name" content="Free HTML Templates"><meta property="og:title" content="$et"><meta property="og:description" content="$ed"><meta property="og:url" content="$canon">
 <meta property="og:image" content="$img"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="$et"><meta name="twitter:description" content="$ed"><meta name="twitter:image" content="$img">
 <meta name="theme-color" content="#16181F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316181F'/><text x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23FFC53D'>100</text></svg>">
 $ld
-<style>$CSS</style></head><body>
+<style>$CSS$MMCSS</style></head><body>
 <a class="skip" href="#templates">Skip to templates</a>
-<header class="wrap top"><a class="brand" href="$BASE"><i>100</i>Free HTML Templates</a><nav aria-label="Main"><a href="{$BASE}#templates">Templates</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="$REPO">GitHub</a></nav></header>
+<header class="wrap top"><a class="brand" href="$BASE"><i>100</i>Free HTML Templates</a><nav aria-label="Main"><a href="{$BASE}#templates">Templates</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="https://mmrahmanbappi.github.io/">All projects</a><a class="gh" href="$REPO">GitHub</a></nav></header>
 <section class="hero" aria-labelledby="h1"><div class="wrap hg"><div>{$crumb}<span class="kick"><b>Free</b>MIT license, no sign up</span><h1 id="h1">$h1</h1><p class="lead">$ei</p><div class="btns"><a class="btn" href="#templates">Browse the templates</a><a class="btn l" href="#how">How to use them</a></div>{$stats}</div>{$wall}</div></section>
 $bar
 <main id="templates"><div class="wrap">$body</div></main>
