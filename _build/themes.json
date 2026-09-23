@@ -89,6 +89,15 @@
    "noun": "Website Templates",
    "plural": "event and community sites",
    "short": "events"
+  },
+  "landing-pages": {
+   "name": "Landing Pages",
+   "title": "",
+   "desc": "",
+   "intro": "Single-purpose pages: coming soon, 404, link in bio, event tickets, product launches, webinars, ebook downloads and job boards. Each one does one job well, with a working countdown, form, picker or filter.",
+   "noun": "Templates",
+   "plural": "landing pages",
+   "short": "landing pages"
   }
  },
  "themes": [
@@ -1640,6 +1649,183 @@
    "fonts": "Familjen Grotesk",
    "colors": "Midnight navy, magenta, mint",
    "keywords": "conference website template, event HTML template free, tech conference website template"
+  },
+  {
+   "cat": "events-community",
+   "slug": "nonprofit-charity",
+   "name": "Clearwater Fund",
+   "type": "Nonprofit and Charity",
+   "desc": "A hopeful clean water charity in deep blue and sunshine yellow. Pick a monthly or one-time amount and see exactly what it pays for, watch the appeal bar move, and sign up to volunteer.",
+   "sections": [
+    "Arched photo hero",
+    "Impact numbers",
+    "Donation picker with monthly and one-time amounts",
+    "What your gift does, live",
+    "Appeal progress bar",
+    "Field stories",
+    "Volunteer form with interests"
+   ],
+   "fonts": "Spectral + Mukta",
+   "colors": "Deep water blue, sunshine yellow, sky",
+   "keywords": "charity website template, nonprofit HTML template free, donation website template"
+  },
+  {
+   "cat": "events-community",
+   "slug": "community-center",
+   "name": "Maple Street Community Centre",
+   "type": "Community Center",
+   "desc": "A friendly neighbourhood centre in teal, maple red and yellow. It shows if the centre is open now, filters weekly activities by age, prices room hire with a community discount and lists events by month.",
+   "sections": [
+    "Hero with open now badge",
+    "Weekly programmes with age filter",
+    "Room hire calculator with discount and extras",
+    "Events calendar by month",
+    "Find us"
+   ],
+   "fonts": "Bitter + Kumbh Sans",
+   "colors": "Teal, maple red, yellow",
+   "keywords": "community center website template, community centre HTML template free, village hall website"
+  },
+  {
+   "cat": "events-community",
+   "slug": "musician-band",
+   "name": "The Low Tides",
+   "type": "Band and Musician",
+   "desc": "A loud indie band site in ultraviolet and sunset orange. The album player runs through the track list, tour dates filter by region with sold out shows marked, and merch goes into a bag.",
+   "sections": [
+    "Huge type hero",
+    "Album player with track list (no audio files)",
+    "Tour dates with region filter",
+    "Merch with drawn products and bag",
+    "Mailing list"
+   ],
+   "fonts": "Dela Gothic One + Instrument Sans",
+   "colors": "Ultraviolet, sunset orange, pale pink",
+   "keywords": "band website template, musician HTML template free, music website template"
+  },
+  {
+   "cat": "events-community",
+   "slug": "podcast",
+   "name": "Second Draft",
+   "type": "Podcast",
+   "desc": "A bold podcast site in navy, orange and sand. Search and filter episodes, play any of them in the sticky player with skip and speed buttons, meet the hosts and copy the RSS link.",
+   "sections": [
+    "Big type hero",
+    "Sticky player with skip and speed",
+    "Episode list with search and topic filter",
+    "Show more button",
+    "Hosts and guests",
+    "Listen anywhere with copy RSS link"
+   ],
+   "fonts": "Anton + Radio Canada",
+   "colors": "Navy, orange, sand",
+   "keywords": "podcast website template, podcast HTML template free, podcast landing page"
+  },
+  {
+   "cat": "landing-pages",
+   "slug": "coming-soon",
+   "name": "Nookery",
+   "type": "Coming Soon",
+   "desc": "A warm coming soon page in forest green and peach. It counts down to launch, shows your place in the waitlist after you sign up, and lets visitors tap through a sneak peek of the products.",
+   "sections": [
+    "Big type hero",
+    "Live launch countdown",
+    "Waitlist signup with your place in line",
+    "Sneak peek product picker",
+    "Social links"
+   ],
+   "fonts": "Abril Fatface + Figtree",
+   "colors": "Forest green, peach",
+   "keywords": "coming soon page template, launch page HTML template free, waitlist landing page template"
+  },
+  {
+   "cat": "landing-pages",
+   "slug": "error-404",
+   "name": "Paper Moon Books",
+   "type": "404 Error Page",
+   "desc": "A playful 404 page for a bookshop in sky blue and pink. A floating book illustration, a search box that filters helpful links as you type, and a random book suggestion.",
+   "sections": [
+    "Big 404 with moon",
+    "Friendly message",
+    "Live search of helpful links",
+    "Back home button",
+    "Random book pick",
+    "Floating book illustration"
+   ],
+   "fonts": "Chango + Nunito",
+   "colors": "Sky blue, pink, ink",
+   "keywords": "404 page template, error page HTML template free, page not found template"
+  },
+  {
+   "cat": "landing-pages",
+   "slug": "link-in-bio",
+   "name": "Rosa Mendes Ceramics",
+   "type": "Link in Bio",
+   "desc": "A mobile-first link page for a ceramicist in glaze teal and mustard. Profile, link buttons, a countdown to the next shop drop, email signup, copy and share buttons, and a dark mode switch.",
+   "sections": [
+    "Profile with avatar and socials",
+    "Next drop card with countdown",
+    "Link buttons",
+    "Email signup",
+    "Copy link and share buttons",
+    "Light and dark mode"
+   ],
+   "fonts": "Pacifico + DM Sans",
+   "colors": "Glaze teal, mustard, warm grey",
+   "keywords": "link in bio template, bio link page HTML free, creator links page"
+  },
+  {
+   "cat": "landing-pages",
+   "slug": "event-ticket",
+   "name": "Night Market Live",
+   "type": "Event Ticket",
+   "desc": "A neon single-night event page in deep purple, pink and cyan. Count down to doors, see the line-up, pick ticket quantities across tiers with limits, try a promo code and watch the total with fees.",
+   "sections": [
+    "Full-bleed photo hero with countdown",
+    "Line-up",
+    "Ticket tiers with quantity limits and sold out",
+    "Promo code",
+    "Order summary with fees",
+    "Good to know"
+   ],
+   "fonts": "Monoton + Golos Text",
+   "colors": "Deep purple, neon pink, cyan",
+   "keywords": "event ticket page template, concert landing page HTML free, ticket sales page"
+  },
+  {
+   "cat": "landing-pages",
+   "slug": "product-launch",
+   "name": "Lumo Desk Lamp",
+   "type": "Product Launch",
+   "desc": "A calm hardware launch page in sage, graphite and amber. Drag the colour and brightness sliders to light up the drawn lamp, switch its finish, tap through features and reserve an early bird unit.",
+   "sections": [
+    "Hero with launch countdown",
+    "Interactive lamp demo with colour, brightness and finish",
+    "Feature tabs",
+    "Early bird offer with stock bar",
+    "Reserve form"
+   ],
+   "fonts": "Tomorrow + Plus Jakarta Sans",
+   "colors": "Sage, graphite, amber",
+   "keywords": "product launch page template, product landing page HTML free, pre-order page template"
+  },
+  {
+   "cat": "landing-pages",
+   "slug": "webinar-signup",
+   "name": "Cash Flow Class",
+   "type": "Webinar Signup",
+   "desc": "A clear webinar signup page in plum, mint and yellow. Choose your city to see the start time where you are, watch seats run down as you register, and add the event to your calendar.",
+   "sections": [
+    "Hero with time zone converter and countdown",
+    "Registration form with seats left",
+    "Add to calendar file",
+    "Agenda",
+    "Speaker bio",
+    "FAQ"
+   ],
+   "fonts": "Gelasio + Gantari",
+   "colors": "Plum, mint, yellow",
+   "keywords": "webinar landing page template, webinar registration HTML free, online event signup page"
   }
  ]
 }
