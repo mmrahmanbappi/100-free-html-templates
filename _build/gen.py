@@ -136,11 +136,11 @@ h1,h2,h3{font-family:var(--h);margin:0;letter-spacing:-.02em}
 @keyframes up{to{transform:translateY(-50%)}}
 .bar{position:sticky;top:0;z-index:40;background:rgba(237,239,243,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
 .bar .wrap{display:flex;gap:14px;align-items:center;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
-.srch{position:relative;flex:0 1 300px}.srch input{width:100%;font:16px var(--b);padding:11px 14px 11px 40px;border:1.5px solid var(--ln);border-radius:12px;background:#fff}.srch svg{position:absolute;left:13px;top:50%;transform:translateY(-50%)}
-.chips{display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none;padding:2px}.chips::-webkit-scrollbar{display:none}
+.srch{position:relative;flex:1 1 280px;max-width:420px}.srch input{width:100%;font:16px var(--b);padding:11px 14px 11px 40px;border:1.5px solid var(--ln);border-radius:12px;background:#fff}.srch svg{position:absolute;left:13px;top:50%;transform:translateY(-50%)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;order:3;flex:1 1 100%;padding:2px}.chips::-webkit-scrollbar{display:none}
 .chips button{flex:none;font:600 14px var(--b);background:#fff;border:1.5px solid var(--ln);border-radius:40px;padding:8px 14px;cursor:pointer;color:var(--ink);white-space:nowrap}.chips button span{color:var(--mu);font-weight:500;margin-left:4px}
 .chips button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}.chips button[aria-pressed=true] span{color:#B9BDC9}
-.count{font-size:14px;color:var(--mu);white-space:nowrap}
+.count{font-size:14px;color:var(--mu);white-space:nowrap;margin-left:auto}
 main{padding:40px 0 30px}.sec{margin-bottom:64px;scroll-margin-top:90px}.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
 .sh h2{font-size:clamp(28px,3.4vw,42px);font-weight:800}.sh p{color:var(--mu);margin:6px 0 0;max-width:56em;font-size:16px}.sh a.all{font-weight:700;color:var(--ac);text-decoration:none;white-space:nowrap}.sh a.all:hover{text-decoration:underline}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
@@ -159,14 +159,15 @@ main{padding:40px 0 30px}.sec{margin-bottom:64px;scroll-margin-top:90px}.sh{disp
 .faq{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:40px}.faq details{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:16px 20px}.faq summary{font-weight:700;cursor:pointer}.faq p{margin:10px 0 0;color:var(--mu);font-size:16px}
 footer{border-top:1px solid var(--ln);padding:28px 0 36px;color:var(--mu);font-size:14px}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer a{font-weight:600}
 @media (max-width:980px){.hg{grid-template-columns:1fr}.wall{height:340px;transform:rotate(-3deg)}.how{grid-template-columns:1fr}.faq{grid-template-columns:1fr}}
-@media (max-width:640px){.top nav{display:none}.srch{flex:1 1 100%}.hero h1 .num{-webkit-text-stroke-width:2px}.wall{height:260px}.grid{grid-template-columns:1fr}}
+@media (max-width:760px){.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);padding-right:30px}.srch{max-width:none}}
+@media (max-width:640px){.top nav{display:none}.srch{flex:1 1 100%}.count{margin-left:0}.hero h1 .num{-webkit-text-stroke-width:2px}.wall{height:260px}.grid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.col{animation:none}.card,.col a{transition:none}}"""
 JS="""<script>
 (()=>{const q=document.getElementById('q'),chips=document.getElementById('chips'),cnt=document.getElementById('cnt'),none=document.getElementById('none');if(!q)return;let cat='all';
 const cards=[...document.querySelectorAll('.card')],secs=[...document.querySelectorAll('.sec')];
 function run(){const v=q.value.trim().toLowerCase();let n=0;cards.forEach(c=>{const ok=(cat==='all'||c.dataset.cat===cat)&&(!v||c.dataset.s.includes(v));c.hidden=!ok;if(ok)n++});
 secs.forEach(s=>{s.hidden=![...s.querySelectorAll('.card')].some(c=>!c.hidden)});cnt.textContent='Showing '+n+' of '+cards.length;none.hidden=n>0}
-q.addEventListener('input',run);if(chips)chips.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;chips.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));cat=b.dataset.c;run();document.getElementById('templates').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});run();})();
+q.addEventListener('input',run);if(chips)chips.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;chips.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));b.scrollIntoView({block:'nearest',inline:'center'});cat=b.dataset.c;run();document.getElementById('templates').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});run();})();
 </script>"""
 def ld(obj): return '<script type="application/ld+json">\n'+json.dumps(obj,indent=1,ensure_ascii=False)+'\n</script>'
 def faq_html(): return "<section class='sec' aria-labelledby='faq'><div class='sh'><div><h2 id='faq'>Questions people ask</h2></div></div><div class='faq'>"+''.join(f"<details{' open' if i==0 else ''}><summary>{e(q)}</summary><p>{e(a)}</p></details>" for i,(q,a) in enumerate(FAQ))+"</div></section>"
