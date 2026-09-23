@@ -1,0 +1,13 @@
+# This repo is HTML, CSS and JavaScript only. Build scripts are PHP (see scripts/).
+*.py
+*.pyc
+*.pyw
+*.ipynb
+__pycache__/
+.venv/
+venv/
+requirements.txt
+pyproject.toml
+Pipfile
+# Temporary file made while taking screenshots
+.shot.html
