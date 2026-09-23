@@ -84,7 +84,7 @@
 - **[Admin Dashboard](admin-dashboard/)** (10 templates): 10 free admin dashboard templates in one HTML file: analytics dashboard, e-commerce admin dashboard, CRM dashboard and more. Mobile friendly and SEO ready.
 - **[E-commerce](ecommerce/)** (8 templates): 8 free e-commerce store templates in one HTML file: fashion store, single product store, electronics store and more. Mobile friendly and SEO ready.
 - **[Portfolio](portfolio/)** (8 templates): 8 free portfolio website templates in one HTML file: developer portfolio, designer portfolio, photographer portfolio and more. Mobile friendly and SEO ready.
-- **[Restaurant & Food](restaurant/)** (8 templates): 8 free restaurant & food website templates in one HTML file: restaurant, cafe and coffee shop, bakery, pizza delivery and more. Mobile friendly and SEO ready.
+- **[Restaurant & Food](restaurant/)** (8 templates): 8 free restaurant & food website templates in one HTML file: restaurant, cafe and coffee shop, bakery and more. Mobile friendly and SEO ready.
 - **[Health & Fitness](health-fitness/)** (6 templates): 6 free health & fitness website templates in one HTML file: gym and fitness, yoga studio, personal trainer and more. Mobile friendly and SEO ready.
 
 New templates are added every week. Coming next: more restaurant and food sites, portfolios, restaurants, clinics, schools, real estate and wedding sites.

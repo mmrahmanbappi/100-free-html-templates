@@ -7,7 +7,7 @@ N=len(T); YEAR=datetime.date.today().year
 def fit(parts,prefix,suffix,limit=160):
     out=prefix+', '.join(parts)+suffix
     k=len(parts)
-    while len(out)>limit and k>1:
+    while len(e(out))>limit and k>1:
         k-=1; out=prefix+', '.join(parts[:k])+' and more'+suffix
     return out
 for ck,cv in C.items():

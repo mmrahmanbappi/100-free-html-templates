@@ -31,7 +31,7 @@ for f in local:
         try: json.loads(b)
         except Exception: chk['jsonld']=False
     imgs=re.findall(r'<img\b[^>]*>',s);chk['img alt']=all(' alt=' in i for i in imgs)
-    ids=set(re.findall(r'\bid="([^"]+)"',s));bad=[h for h in re.findall(r'href="#([^"]+)"',s) if h not in ids]
+    ids=set(re.findall(r'\bid=["\']([^"\']+)["\']',s));bad=[h for h in re.findall(r'href="#([^"]+)"',s) if h not in ids]
     if bad: chk['anchors ok']=False
     if rel!='index.html' and rel.count('/')==2:
         st2,_=get(u+'index.html');chk['download file']=st2==200
