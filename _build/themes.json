@@ -71,6 +71,24 @@
    "noun": "Website Templates",
    "plural": "education sites",
    "short": "education"
+  },
+  "real-estate-travel": {
+   "name": "Real Estate & Travel",
+   "title": "",
+   "desc": "",
+   "intro": "Websites for estate agents, single property listings, interior designers, travel agencies, hotels, tour guides, car hire and holiday rentals. Each one has a working search, calendar or price calculator.",
+   "noun": "Website Templates",
+   "plural": "real estate and travel sites",
+   "short": "travel"
+  },
+  "events-community": {
+   "name": "Events & Community",
+   "title": "",
+   "desc": "",
+   "intro": "Websites for weddings, conferences, charities, community centres, bands and podcasts, with working countdowns, RSVP forms, agendas and ticket pickers.",
+   "noun": "Website Templates",
+   "plural": "event and community sites",
+   "short": "events"
   }
  },
  "themes": [
@@ -1440,6 +1458,188 @@
    "fonts": "Funnel Display + Funnel Sans",
    "colors": "Grape purple, lemon, lavender",
    "keywords": "elearning website template, online learning platform HTML template free, LMS website template"
+  },
+  {
+   "cat": "real-estate-travel",
+   "slug": "real-estate-agency",
+   "name": "Keystone Realty",
+   "type": "Real Estate Agency",
+   "desc": "A calm, trustworthy estate agency in teal and gold. Switch between buy and rent, filter homes by area, bedrooms and price, save favourites, and work out a monthly mortgage payment.",
+   "sections": [
+    "Full-bleed photo hero with property search",
+    "Buy or rent toggle",
+    "Listing cards with favourites",
+    "Saved only filter",
+    "Mortgage calculator with payment split",
+    "Agents",
+    "Sell your home call to action"
+   ],
+   "fonts": "Prata + Heebo",
+   "colors": "Teal, gold, slate",
+   "keywords": "real estate website template, realtor HTML template free, estate agent website template"
+  },
+  {
+   "cat": "real-estate-travel",
+   "slug": "property-listing",
+   "name": "14 Linden Court",
+   "type": "Property Listing",
+   "desc": "A quiet, editorial single property page. Flick through the photo gallery or open it full size, tap rooms on the floor plan to see sizes, and book a viewing time.",
+   "sections": [
+    "Title and guide price",
+    "Photo gallery with thumbnails, arrows and full size view",
+    "Key facts strip",
+    "Description and features",
+    "Interactive floor plan",
+    "Local area",
+    "Viewing booking with time slots"
+   ],
+   "fonts": "Cardo + Josefin Sans",
+   "colors": "Deep olive, stone, black",
+   "keywords": "property listing template, single property website HTML free, house for sale page template"
+  },
+  {
+   "cat": "real-estate-travel",
+   "slug": "interior-design",
+   "name": "Hollow & Hue",
+   "type": "Interior Design",
+   "desc": "A soft, grown-up interior design studio in moss and plaster pink. The portfolio filters by room, and a three-question style quiz shows your look with a matching palette.",
+   "sections": [
+    "Split hero with arch badge",
+    "Portfolio with room filter",
+    "Style quiz with live result and palette",
+    "Services with fixed fees",
+    "Enquiry form"
+   ],
+   "fonts": "Poiret One + Questrial",
+   "colors": "Moss green, plaster pink, charcoal",
+   "keywords": "interior design website template, interior designer HTML template free, interior portfolio template"
+  },
+  {
+   "cat": "real-estate-travel",
+   "slug": "travel-agency",
+   "name": "Far & Wide Trips",
+   "type": "Travel Agency",
+   "desc": "A bright travel agency with a photo collage hero. Filter trips by region, length and budget, open a sample itinerary day by day, and see an estimated cost in the enquiry form.",
+   "sections": [
+    "Photo collage hero",
+    "Trip cards with region, length and budget filters",
+    "Day by day itinerary tabs",
+    "Enquiry form with trip cost estimate"
+   ],
+   "fonts": "Bungee + Hind Madurai",
+   "colors": "Lagoon teal, hibiscus pink, sand",
+   "keywords": "travel agency website template, tour operator HTML template free, holiday packages website template"
+  },
+  {
+   "cat": "real-estate-travel",
+   "slug": "hotel-resort",
+   "name": "Casa Palmera",
+   "type": "Hotel and Resort",
+   "desc": "A relaxed coastal resort in ocean blue and sand. Pick dates and guests in the hero, and every room shows the total for your stay, hides rooms too small for your group and builds a booking summary.",
+   "sections": [
+    "Full-bleed hero with date and guest picker",
+    "Intro with photos",
+    "Rooms with nightly and total prices",
+    "Booking summary",
+    "Amenities",
+    "Photo gallery"
+   ],
+   "fonts": "Cinzel + Montserrat",
+   "colors": "Ocean blue, sand gold, white",
+   "keywords": "hotel website template, resort HTML template free, hotel booking website template"
+  },
+  {
+   "cat": "real-estate-travel",
+   "slug": "tour-guide",
+   "name": "Ridge & River Tours",
+   "type": "Tour Guide",
+   "desc": "A rugged hiking tour company in heather and moss. Filter tours by length, change the group size to see the price per person drop, and pick a date on a live month calendar.",
+   "sections": [
+    "Big type photo hero",
+    "Key facts band",
+    "Tour list with length filter",
+    "Group size price calculator",
+    "Availability calendar with booking form",
+    "Reviews"
+   ],
+   "fonts": "Staatliches + Signika",
+   "colors": "Heather purple, moss green, mist",
+   "keywords": "tour guide website template, tour company HTML template free, hiking tours website template"
+  },
+  {
+   "cat": "real-estate-travel",
+   "slug": "car-rental",
+   "name": "Wayfare Car Hire",
+   "type": "Car Rental",
+   "desc": "A bold car hire site in red and graphite with a drawn car on the road. Filter cars by type, gearbox and seats, pick one, add extras, and the total updates for your dates.",
+   "sections": [
+    "Hero with drawn car and date search",
+    "Car filters",
+    "Car list with daily and total prices",
+    "Weekly discounts",
+    "Booking summary with extras",
+    "Why us",
+    "Photo band"
+   ],
+   "fonts": "Saira Condensed + Saira",
+   "colors": "Red, graphite, light grey",
+   "keywords": "car rental website template, car hire HTML template free, rent a car template"
+  },
+  {
+   "cat": "real-estate-travel",
+   "slug": "vacation-rental",
+   "name": "Fernhollow Cabin",
+   "type": "Vacation Rental",
+   "desc": "A cosy single cabin page in pine and lake blue. Pick check-in and check-out on the availability calendar, booked nights are crossed out, and the price splits weeknights, weekends and fees.",
+   "sections": [
+    "Photo grid gallery",
+    "Key facts",
+    "About and amenities",
+    "House rules",
+    "Host",
+    "Availability calendar with date range",
+    "Price breakdown",
+    "The area"
+   ],
+   "fonts": "Zilla Slab + Cabin",
+   "colors": "Pine green, lake blue, warm wood",
+   "keywords": "vacation rental website template, cabin rental HTML template free, holiday home website template"
+  },
+  {
+   "cat": "events-community",
+   "slug": "wedding",
+   "name": "Amara & Theo",
+   "type": "Wedding",
+   "desc": "A romantic wedding site in eucalyptus and blush with a script heading. It counts down to the big day, tells the couple's story, and the RSVP asks each guest for their meal.",
+   "sections": [
+    "Arched photo hero with live countdown",
+    "Our story timeline",
+    "Photo trio",
+    "Day schedule",
+    "Travel and stay",
+    "RSVP with meal choice per guest",
+    "FAQ"
+   ],
+   "fonts": "Pinyon Script + EB Garamond",
+   "colors": "Eucalyptus green, blush, ink",
+   "keywords": "wedding website template, wedding RSVP HTML template free, save the date website template"
+  },
+  {
+   "cat": "events-community",
+   "slug": "conference-event",
+   "name": "Buildwell Summit",
+   "type": "Conference",
+   "desc": "A bold tech conference site in midnight, magenta and mint. Filter speakers by track, star talks to build your own schedule, and pick ticket quantities with a running total.",
+   "sections": [
+    "Big type hero with early bird countdown",
+    "Speakers with track filter",
+    "Two-day agenda with my schedule",
+    "Ticket tiers with quantity and total",
+    "Venue"
+   ],
+   "fonts": "Familjen Grotesk",
+   "colors": "Midnight navy, magenta, mint",
+   "keywords": "conference website template, event HTML template free, tech conference website template"
   }
  ]
 }
