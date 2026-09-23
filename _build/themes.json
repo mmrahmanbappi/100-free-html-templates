@@ -98,6 +98,15 @@
    "noun": "Templates",
    "plural": "landing pages",
    "short": "landing pages"
+  },
+  "local-services": {
+   "name": "Local Services",
+   "title": "",
+   "desc": "",
+   "intro": "Websites for law firms, accountants, plumbers, cleaners, garages, vets, removal firms and builders. Each one has a working quote calculator, booking form or filter, so customers get a price without phoning.",
+   "noun": "Website Templates",
+   "plural": "local service businesses",
+   "short": "local services"
   }
  },
  "themes": [
@@ -1826,6 +1835,177 @@
    "fonts": "Gelasio + Gantari",
    "colors": "Plum, mint, yellow",
    "keywords": "webinar landing page template, webinar registration HTML free, online event signup page"
+  },
+  {
+   "cat": "landing-pages",
+   "slug": "ebook-download",
+   "name": "The Calm Inbox",
+   "type": "Ebook Download",
+   "desc": "A calm lead magnet page in cornflower blue with a drawn 3D book cover. Tap through chapter previews, and the download form gives a real sample file after signup.",
+   "sections": [
+    "Hero with checklist and download form",
+    "Drawn book cover",
+    "Reader numbers",
+    "Chapter preview tabs",
+    "Reader comment"
+   ],
+   "fonts": "Yeseva One + Work Sans",
+   "colors": "Cornflower blue, ink, yellow",
+   "keywords": "ebook landing page template, lead magnet page HTML free, free download page template"
+  },
+  {
+   "cat": "landing-pages",
+   "slug": "job-board",
+   "name": "Hireloop",
+   "type": "Job Board",
+   "desc": "A clean job board in bright blue and amber. Search and filter jobs by location, type, salary and remote, open any job in the detail panel, save it and apply.",
+   "sections": [
+    "Hero",
+    "Search bar with filters",
+    "Remote only and saved jobs",
+    "Job list with salary on every post",
+    "Job detail panel",
+    "Apply form",
+    "Post a job banner"
+   ],
+   "fonts": "Geologica",
+   "colors": "Bright blue, amber, slate",
+   "keywords": "job board template, job listing website HTML free, careers page template"
+  },
+  {
+   "cat": "local-services",
+   "slug": "law-firm",
+   "name": "Hartley & Okafor",
+   "type": "Law Firm",
+   "desc": "A trustworthy law firm in oxblood and stone with a classic serif. Pick a practice area to see what's included and typical fees, filter lawyers by area and book a free call.",
+   "sections": [
+    "Split hero with key numbers",
+    "Practice area tabs with fees",
+    "Lawyers with area filter",
+    "Case results",
+    "Free consultation form"
+   ],
+   "fonts": "Castoro + Libre Franklin",
+   "colors": "Oxblood, navy, stone",
+   "keywords": "law firm website template, lawyer HTML template free, solicitor website template"
+  },
+  {
+   "cat": "local-services",
+   "slug": "accounting-firm",
+   "name": "Ledgerline",
+   "type": "Accounting Firm",
+   "desc": "A calm accountancy site in forest green and mint. Monthly plan prices change with your turnover, and the tax deadline table counts down the days and highlights what's coming up.",
+   "sections": [
+    "Hero with next tax deadline countdown",
+    "Services",
+    "Monthly plans priced by turnover",
+    "Tax deadline table with business type filter",
+    "Quote form"
+   ],
+   "fonts": "Encode Sans Semi Condensed + Encode Sans",
+   "colors": "Forest green, mint, yellow",
+   "keywords": "accounting firm website template, accountant HTML template free, bookkeeping website template"
+  },
+  {
+   "cat": "local-services",
+   "slug": "plumber-home-services",
+   "name": "FlowRight Plumbing",
+   "type": "Plumber",
+   "desc": "A bold plumbing site in water blue and safety orange with a sticky emergency call bar. Pick a job and urgency for an instant price range, and check if your postcode is covered.",
+   "sections": [
+    "Sticky emergency call bar",
+    "Hero with trust badges",
+    "Instant quote by job and urgency",
+    "Postcode area checker",
+    "Services"
+   ],
+   "fonts": "Russo One + Ubuntu",
+   "colors": "Water blue, safety orange, white",
+   "keywords": "plumber website template, plumbing HTML template free, home services website template"
+  },
+  {
+   "cat": "local-services",
+   "slug": "cleaning-company",
+   "name": "Fresh Nest Cleaning",
+   "type": "Cleaning Company",
+   "desc": "A fresh cleaning company site in mint and sky blue. Set bedrooms, bathrooms, clean type, frequency and extras, and the price per clean updates before you book.",
+   "sections": [
+    "Hero with photo pair",
+    "Cleaning types",
+    "Price calculator with bedrooms, bathrooms, frequency and extras",
+    "Booking form",
+    "Reviews"
+   ],
+   "fonts": "Comfortaa + Open Sans",
+   "colors": "Mint, sky blue, navy",
+   "keywords": "cleaning company website template, house cleaning HTML template free, cleaning service website"
+  },
+  {
+   "cat": "local-services",
+   "slug": "auto-repair",
+   "name": "Torque Street Garage",
+   "type": "Auto Repair",
+   "desc": "A workshop-tough garage site in racing blue and hazard yellow. Fixed prices for common jobs, and the booking form updates the estimate for your car size and age.",
+   "sections": [
+    "Hero with open now status",
+    "Fixed price list",
+    "Booking with car size, model and year",
+    "Live estimate",
+    "Reviews"
+   ],
+   "fonts": "Teko + Work Sans",
+   "colors": "Racing blue, hazard yellow, concrete",
+   "keywords": "auto repair website template, car garage HTML template free, mechanic website template"
+  },
+  {
+   "cat": "local-services",
+   "slug": "pet-care-vet",
+   "name": "Paws & Whiskers Vets",
+   "type": "Vet and Pet Care",
+   "desc": "A warm, rounded vet site in orange and sage. Pick dog, cat or rabbit to see services and prices, work out when jabs are due and add reminders to your calendar.",
+   "sections": [
+    "Emergency bar",
+    "Blob photo hero",
+    "Pet type picker with services and prices",
+    "Vaccination reminder with calendar file",
+    "Appointment form"
+   ],
+   "fonts": "Sniglet + Nunito",
+   "colors": "Warm orange, sage green, pale blue",
+   "keywords": "vet clinic website template, veterinary HTML template free, pet care website template"
+  },
+  {
+   "cat": "local-services",
+   "slug": "moving-company",
+   "name": "Two Hands Removals",
+   "type": "Moving Company",
+   "desc": "A friendly removals site in cardboard brown and navy with drawn boxes. The move calculator suggests a van, crew, hours and price, and the packing checklist tracks progress by week.",
+   "sections": [
+    "Hero with drawn boxes and van",
+    "Move size calculator",
+    "Fixed quote form",
+    "Packing checklist by week with progress bar"
+   ],
+   "fonts": "Passion One + Karla",
+   "colors": "Cardboard brown, navy, kraft",
+   "keywords": "moving company website template, removals HTML template free, movers website template"
+  },
+  {
+   "cat": "local-services",
+   "slug": "construction-company",
+   "name": "Stonebridge Build",
+   "type": "Construction Company",
+   "desc": "A solid construction company site in steel blue, concrete and safety yellow. A live safety counter, projects filtered by type, and a quote form with a budget slider.",
+   "sections": [
+    "Full-bleed site photo hero",
+    "Safety record counter",
+    "Projects with type filter",
+    "Services",
+    "Quote form with budget slider"
+   ],
+   "fonts": "Oswald + Barlow Semi Condensed",
+   "colors": "Steel blue, concrete, safety yellow",
+   "keywords": "construction company website template, builder HTML template free, contractor website template"
   }
  ]
 }
