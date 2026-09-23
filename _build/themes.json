@@ -34,7 +34,7 @@
    "intro": "Online store templates with working shopping bags, product filters and add to cart buttons, built with plain HTML, CSS and JavaScript. Connect them to Shopify Buy Button, Stripe or Snipcart to take real orders.",
    "noun": "Store Templates",
    "plural": "online stores",
-   "short": "online store"
+   "short": "store"
   },
   "portfolio": {
    "name": "Portfolio",
@@ -58,10 +58,19 @@
    "name": "Health & Fitness",
    "title": "",
    "desc": "",
-   "intro": "Websites for gyms, yoga studios, personal trainers, dentists, clinics and spas. Each one has a working booking tool, clear prices and opening hours, so clients can pick a time without phoning.",
+   "intro": "Websites for gyms, yoga studios, personal trainers, nutritionists, physios, dentists, clinics and spas. Each one has a working booking tool, clear prices and opening hours, so clients can pick a time without phoning.",
    "noun": "Website Templates",
    "plural": "health and fitness sites",
    "short": "fitness"
+  },
+  "education": {
+   "name": "Education",
+   "title": "",
+   "desc": "",
+   "intro": "Websites for online courses, schools, universities, tutors, language schools, daycares, coding bootcamps and e-learning platforms. Each one has a working course finder, timetable, quiz or price calculator.",
+   "noun": "Website Templates",
+   "plural": "education sites",
+   "short": "education"
   }
  },
  "themes": [
@@ -1254,6 +1263,183 @@
    "fonts": "Forum + Raleway",
    "colors": "Rosewood, blush, olive grey",
    "keywords": "spa website template, beauty salon HTML template free, massage spa website template"
+  },
+  {
+   "cat": "health-fitness",
+   "slug": "nutritionist",
+   "name": "Leaf & Ladle",
+   "type": "Nutritionist",
+   "desc": "A fresh, friendly dietitian site in beet and leaf green. Meal plan prices change as you pick 4, 8 or 12 weeks, and the water calculator fills up glasses as you type.",
+   "sections": [
+    "Hero with round plate photo",
+    "Services",
+    "Meal plan packages with length toggle and savings",
+    "Water intake calculator with glass counter",
+    "Consult booking form"
+   ],
+   "fonts": "Petrona + Golos Text",
+   "colors": "Beet red, leaf green, mint white",
+   "keywords": "nutritionist website template, dietitian HTML template free, meal plan website template"
+  },
+  {
+   "cat": "health-fitness",
+   "slug": "physiotherapy",
+   "name": "Straightline Physio",
+   "type": "Physiotherapy",
+   "desc": "A bold physio clinic in indigo and orange. Tap a spot on the body map to see common problems, usual sessions and recovery time, then book for that area.",
+   "sections": [
+    "Hero with key facts",
+    "Clickable body area picker",
+    "Conditions and recovery details per area",
+    "How it works",
+    "Price table",
+    "Booking form with FAQ"
+   ],
+   "fonts": "Asap Condensed + Asap",
+   "colors": "Indigo, orange, pale blue",
+   "keywords": "physiotherapy website template, physio clinic HTML template free, physical therapy website template"
+  },
+  {
+   "cat": "education",
+   "slug": "online-course",
+   "name": "Write It Plain",
+   "type": "Online Course",
+   "desc": "A course sales page styled like an editor's desk, with red pen edits in the hero. The curriculum opens module by module, the preview lesson plays, and team seat prices update.",
+   "sections": [
+    "Hero with editing marks and lesson preview player",
+    "Course facts strip",
+    "Curriculum accordion with open all",
+    "Instructor bio",
+    "Pricing with team seat counter",
+    "Reviews with star filter",
+    "FAQ"
+   ],
+   "fonts": "Libre Caslon Text + Sen",
+   "colors": "Prussian blue, ochre, red pen, pale blue",
+   "keywords": "online course website template, course landing page HTML template free, e-course sales page template"
+  },
+  {
+   "cat": "education",
+   "slug": "school",
+   "name": "Hollybrook Primary",
+   "type": "School",
+   "desc": "A warm primary school site in maroon and gold. The notice board counts down to the next holiday, news filters by topic, and the term dates table highlights the next break.",
+   "sections": [
+    "Hero with notice board and holiday countdown",
+    "School news with category filter",
+    "Upcoming events",
+    "Admissions steps",
+    "Term dates table with next holiday highlighted",
+    "Visit and contact"
+   ],
+   "fonts": "Baloo 2 + PT Sans",
+   "colors": "Maroon, gold, sky blue",
+   "keywords": "school website template, primary school HTML template free, academy website template"
+  },
+  {
+   "cat": "education",
+   "slug": "university",
+   "name": "Northgate University",
+   "type": "University",
+   "desc": "A classic university site in deep green and copper. Search from the hero, then filter courses by level, subject and study mode and add them to a shortlist.",
+   "sections": [
+    "Full-bleed campus hero with course search",
+    "Key numbers",
+    "Course finder with filters and shortlist",
+    "Campus life photo grid",
+    "How to apply steps",
+    "Open day call to action"
+   ],
+   "fonts": "Crimson Pro + Readex Pro",
+   "colors": "Deep green, copper, pale sage",
+   "keywords": "university website template, college HTML template free, course finder template"
+  },
+  {
+   "cat": "education",
+   "slug": "tutoring",
+   "name": "Brightpath Tutors",
+   "type": "Tutoring",
+   "desc": "A cheerful tutoring site in purple and sunflower. Filter tutors by subject, work out the monthly cost with the price calculator, and book a free trial with any tutor.",
+   "sections": [
+    "Hero with floating tutor cards",
+    "Tutor cards with subject filter",
+    "Price calculator by level, format, hours and weeks",
+    "How it works",
+    "Free trial lesson form"
+   ],
+   "fonts": "Wix Madefor Display + Wix Madefor Text",
+   "colors": "Purple, sunflower yellow, lilac",
+   "keywords": "tutoring website template, tutor HTML template free, tuition centre website template"
+  },
+  {
+   "cat": "education",
+   "slug": "language-school",
+   "name": "Chatterbox",
+   "type": "Language School",
+   "desc": "A colourful language school with speech bubbles in the hero. Pick a language, answer six quick questions to find your level, then filter the timetable and hold a seat.",
+   "sections": [
+    "Speech bubble hero",
+    "Language picker",
+    "Level quiz with live result",
+    "Course timetable with level filter and seat holding",
+    "Prices",
+    "Photo strip"
+   ],
+   "fonts": "Righteous + Hind",
+   "colors": "Green, sunshine yellow, rose, ink",
+   "keywords": "language school website template, language course HTML template free, language academy website template"
+  },
+  {
+   "cat": "education",
+   "slug": "kids-daycare",
+   "name": "Little Acorns",
+   "type": "Kids Daycare",
+   "desc": "A soft, playful daycare site in acorn brown, leaf green and sunshine. The daily routine highlights what's happening right now, and each age group shows ratios and fees.",
+   "sections": [
+    "Hero with rounded photo collage",
+    "Daily routine timeline with live now marker",
+    "Age groups with fees",
+    "Safety promises",
+    "Visit booking with time slots"
+   ],
+   "fonts": "Grandstander + Quicksand",
+   "colors": "Acorn brown, leaf green, sunshine, sky blue",
+   "keywords": "daycare website template, nursery HTML template free, preschool website template"
+  },
+  {
+   "cat": "education",
+   "slug": "coding-bootcamp",
+   "name": "Forge Code School",
+   "type": "Coding Bootcamp",
+   "desc": "A blueprint-style coding school. Code types itself in the hero, each track has a week by week syllabus, outcomes show as a bar chart, and the application has 3 steps.",
+   "sections": [
+    "Blueprint hero with typing code editor",
+    "Course tracks with tabs",
+    "Week by week syllabus",
+    "Graduate outcome numbers and bar chart",
+    "3-step application form with checks"
+   ],
+   "fonts": "Anybody + Fragment Mono",
+   "colors": "Blueprint blue, yellow, white",
+   "keywords": "coding bootcamp website template, coding school HTML template free, programming course website template"
+  },
+  {
+   "cat": "education",
+   "slug": "elearning-platform",
+   "name": "Studyloop",
+   "type": "E-learning Platform",
+   "desc": "A bright e-learning platform in grape and lemon. Search, filter and sort the course catalogue, and every course you enrol in shows up in the learner dashboard in the hero.",
+   "sections": [
+    "Hero with learner dashboard preview",
+    "Course catalogue with search, level, price and sort",
+    "Category chips",
+    "Enrol buttons that update the dashboard",
+    "Learn on any screen",
+    "Free and Plus plans"
+   ],
+   "fonts": "Funnel Display + Funnel Sans",
+   "colors": "Grape purple, lemon, lavender",
+   "keywords": "elearning website template, online learning platform HTML template free, LMS website template"
   }
  ]
 }

@@ -1,0 +1,45 @@
+<header><nav class="wrap nav" aria-label="Main"><a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="22" fill="none" stroke="#5B3FD1" stroke-width="10" stroke-dasharray="100 38"/></svg>Studyloop</a>
+<ul class="menu" id="menu"><li><a href="#catalogue">Courses</a></li><li><a href="#anywhere">How it works</a></li><li><a href="#plans">Plans</a></li><li><a href="#catalogue" class="cta">Start free</a></li></ul><button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button></nav></header>
+<main id="main">
+<section class="hero" aria-labelledby="h1"><div class="wrap"><div><h1 id="h1">Learn a little every day. It adds up fast.</h1><p>Over 600 short courses in business, tech, design and life skills. Lessons take 10 minutes, so you can learn on the bus, at lunch or before bed.</p><div class="row"><a class="btn" href="#catalogue">Browse courses</a><a class="btn y" href="#plans">See plans</a></div></div>
+<div class="dash" aria-label="Your learning dashboard preview"><h2>Hi Maya <span id="dd"></span></h2>
+<div class="tile ring"><svg width="62" height="62" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="#DCD5F7" stroke-width="5"/><circle id="rg" cx="18" cy="18" r="15" fill="none" stroke="#5B3FD1" stroke-width="5" stroke-linecap="round" stroke-dasharray="94.2" stroke-dashoffset="94.2" transform="rotate(-90 18 18)"/></svg><div><small>Weekly goal</small><b id="wg">0 of 60</b><small>minutes</small></div></div>
+<div class="tile"><small>Learning streak</small><b id="sk">6 days</b><div class="streak" id="stk" aria-hidden="true"></div></div>
+<div class="tile mine"><small>My courses</small><ul id="mine" aria-live="polite"></ul></div></div></div></section>
+
+<section id="catalogue" aria-labelledby="c1"><div class="wrap"><div class="sh"><div><h2 id="c1">Course catalogue</h2><p>Enrol in anything and it appears in your dashboard at the top of the page.</p></div></div>
+<div class="bar"><div class="srch"><label for="q" style="position:absolute;left:-999px">Search courses</label><input id="q" type="search" placeholder="Search courses or teachers"></div>
+<label for="lvl" style="position:absolute;left:-999px">Level</label><select id="lvl"><option value="">Any level</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select>
+<label for="prc" style="position:absolute;left:-999px">Price</label><select id="prc"><option value="">Free and paid</option><option value="free">Free only</option><option value="paid">Paid only</option></select>
+<label for="srt" style="position:absolute;left:-999px">Sort by</label><select id="srt"><option value="pop">Most popular</option><option value="rate">Highest rated</option><option value="short">Shortest first</option></select></div>
+<div class="chips" id="chips" role="group" aria-label="Category"><button type="button" aria-pressed="true" data-c="">All</button><button type="button" aria-pressed="false" data-c="Business">Business</button><button type="button" aria-pressed="false" data-c="Tech">Tech</button><button type="button" aria-pressed="false" data-c="Design">Design</button><button type="button" aria-pressed="false" data-c="Life skills">Life skills</button></div>
+<p class="cnt" id="cnt" aria-live="polite"></p><div class="cards" id="cards"></div></div></section>
+
+<section class="any" id="anywhere" aria-labelledby="a1"><div class="wrap"><div><h2 id="a1">Learn on any screen</h2><p>Start a lesson on your laptop, finish it on your phone. Your progress follows you.</p><ul><li>Download lessons to watch offline</li><li>Short quizzes help it stick</li><li>Certificates you can add to your CV</li><li>Reminders at the time that suits you</li></ul></div>
+<img src="https://images.unsplash.com/photo-1596496050827-8299e0220de1?w=900&q=75&auto=format&fit=crop" alt="Person drawing on a tablet with a stylus" width="900" height="675" loading="lazy"></div></section>
+
+<section class="pl" id="plans" aria-labelledby="p1"><div class="wrap"><div class="sh"><div><h2 id="p1">Plans</h2><p>Start free. Upgrade when you want more.</p></div></div>
+<div class="pg"><div class="pp"><h3>Free</h3><div class="pr">$0</div><ul><li>120 free courses</li><li>Progress tracking and streaks</li><li>Watch on web and mobile</li></ul><a class="btn" href="#catalogue">Start learning</a></div>
+<div class="pp pro"><h3>Plus</h3><div class="pr">$12<small> a month</small></div><ul><li>Every course, 600 and growing</li><li>Offline downloads</li><li>Certificates for every course</li><li>Cancel any time</li></ul><a class="btn" href="#catalogue">Try Plus free for 7 days</a></div></div></div></section>
+</main>
+<footer><div class="wrap"><p>© <span id="yr"></span> Studyloop Learning Ltd.</p><p><a href="https://unsplash.com">Photos: Unsplash</a> &nbsp;|&nbsp; <a href="https://mmrahmanbappi.github.io/free-html-templates/">More free templates</a></p></div></footer>
+<script>
+(()=>{const $=id=>document.getElementById(id);
+const IC={Business:'<path d="M10 40h44M16 40V26h8v14M28 40V18h8v22M40 40V30h8v10" stroke="#fff" stroke-width="4" fill="none"/>',Tech:'<path d="M22 20 10 32l12 12M42 20l12 12-12 12" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>',Design:'<circle cx="24" cy="26" r="12" fill="none" stroke="#fff" stroke-width="4"/><rect x="30" y="30" width="20" height="20" fill="none" stroke="#fff" stroke-width="4"/>','Life skills':'<path d="M32 50s-18-10-18-24a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 14-18 24-18 24z" fill="none" stroke="#fff" stroke-width="4"/>'};
+const COL={Business:"#1F8A70",Tech:"#5B3FD1",Design:"#E4572E",'Life skills':"#D6336C"};
+const C=[["Excel for everyday work","Business","Beginner",0,3.5,4.8,41200,"Hannah Moss"],["Managing your first team","Business","Intermediate",39,5,4.7,18300,"Owen Price"],["Negotiation basics","Business","Beginner",29,2.5,4.6,12900,"Grace Lin"],["Python for beginners","Tech","Beginner",0,8,4.9,63500,"Arjun Rao"],["SQL in a weekend","Tech","Beginner",29,4,4.8,27100,"Lena Fischer"],["Build a website with HTML and CSS","Tech","Beginner",0,6,4.7,48800,"Sam Carter"],["JavaScript beyond the basics","Tech","Advanced",49,9,4.8,15200,"Arjun Rao"],["Figma from zero","Design","Beginner",29,4.5,4.8,22400,"Mia Torres"],["Colour and type for non-designers","Design","Beginner",0,2,4.6,19800,"Mia Torres"],["UX research methods","Design","Intermediate",39,6,4.7,9700,"Tom Becker"],["Money basics: budgets and saving","Life skills","Beginner",0,2,4.9,35600,"Rita Gomez"],["Public speaking without panic","Life skills","Intermediate",29,3,4.8,21300,"Owen Price"]];
+const mine=new Map([["Python for beginners",42],["Money basics: budgets and saving",75]]);let cat='';
+function cover(c){return`<div class="cv" style="background:${COL[c[1]]};background-image:radial-gradient(circle at 85% 20%,rgba(255,255,255,.22) 0 22%,transparent 23%),radial-gradient(circle at 10% 90%,rgba(0,0,0,.12) 0 28%,transparent 29%)"><span class="lv">${c[2]}</span><svg viewBox="0 0 64 64" aria-hidden="true">${IC[c[1]]}</svg></div>`}
+function cards(){const q=$('q').value.trim().toLowerCase(),lv=$('lvl').value,p=$('prc').value,s=$('srt').value;
+let r=C.filter(c=>(!cat||c[1]===cat)&&(!lv||c[2]===lv)&&(!p||(p==='free'?c[3]===0:c[3]>0))&&(!q||(c[0]+' '+c[7]).toLowerCase().includes(q)));
+r.sort((a,b)=>s==='rate'?b[5]-a[5]:s==='short'?a[4]-b[4]:b[6]-a[6]);$('cnt').textContent=`${r.length} course${r.length===1?'':'s'}`;
+$('cards').innerHTML=r.length?r.map(c=>{const on=mine.has(c[0]);return`<article class="cc">${cover(c)}<div class="c"><h3>${c[0]}</h3><p class="by">with ${c[7]}</p><div class="mt"><span><b>★ ${c[5]}</b></span><span>${c[4]} hours</span><span>${(c[6]/1000).toFixed(1)}k learners</span></div><div class="ft"><span class="pr">${c[3]?'$'+c[3]:'Free'}</span><button type="button" data-n="${c[0]}" aria-pressed="${on}">${on?'Enrolled ✓':'Enrol'}</button></div></div></article>`}).join(''):'<p class="none">No courses match. Try a different word or clear a filter.</p>'}
+function dash(){const L=[...mine];$('mine').innerHTML=L.length?L.map(([n,p])=>`<li><span>${n}</span><span class="pb"><i style="width:${p}%"></i></span><span class="pc">${p}%</span></li>`).join(''):'<li class="em">No courses yet. Enrol below to get started.</li>';
+const m=Math.min(60,24+L.length*9);$('wg').textContent=`${m} of 60`;$('rg').style.strokeDashoffset=94.2*(1-m/60)}
+$('cards').onclick=e=>{const b=e.target.closest('button');if(!b)return;const n=b.dataset.n;mine.has(n)?mine.delete(n):mine.set(n,0);cards();dash()};
+['q','lvl','prc','srt'].forEach(i=>$(i).addEventListener('input',cards));
+$('chips').onclick=e=>{const b=e.target.closest('button');if(!b)return;$('chips').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));cat=b.dataset.c;cards()};
+const D=['M','T','W','T','F','S','S'],td=(new Date().getDay()+6)%7;$('stk').innerHTML=D.map((d,i)=>`<i class="${i===td?'td':'on'}"></i>`).join('');$('dd').textContent=new Date().toLocaleDateString('en-US',{weekday:'long'});
+cards();dash();
+})();
+</script>

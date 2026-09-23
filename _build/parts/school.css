@@ -1,0 +1,37 @@
+:root{--mr:#7B1E3A;--mr2:#5E142C;--gd:#F2B233;--sk:#E6F1FA;--sk2:#CFE3F4;--ink:#1F2433;--gr:#545B6B;--ln:#E1E5EC;--h:"Baloo 2",system-ui,sans-serif;--b:"PT Sans",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:var(--b);font-size:18px;line-height:1.6;color:var(--ink);background:#fff}
+img{max-width:100%;height:auto;display:block}a{color:inherit}h1,h2,h3{font-family:var(--h);font-weight:700;margin:0;line-height:1.1}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;background:var(--gd);padding:8px;z-index:99}
+:focus-visible{outline:3px solid var(--gd);outline-offset:2px}
+.util{background:var(--mr2);color:#F4DCE3;font-size:15px}.util .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;padding-top:7px;padding-bottom:7px}.util a{color:#fff}
+.hd{background:var(--mr);color:#fff}.nav{display:flex;justify-content:space-between;align-items:center;height:86px;position:relative}
+.logo{display:flex;gap:12px;align-items:center;text-decoration:none;font-family:var(--h);font-size:24px;line-height:1.05}.logo small{display:block;font-family:var(--b);font-size:13px;opacity:.85}
+.menu{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-weight:700}.menu a{text-decoration:none}.menu a:hover{color:var(--gd)}
+.burger{display:none;background:none;border:2px solid #fff;color:#fff;width:44px;height:40px;border-radius:10px;font-size:20px;cursor:pointer}
+.hero{position:relative;background:var(--sk)}.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding-top:50px;padding-bottom:50px}
+.hero h1{font-size:clamp(40px,5.2vw,68px);color:var(--mr)}.hero p{font-size:20px;color:var(--gr);margin:16px 0 26px;max-width:30em}
+.btn{display:inline-block;background:var(--mr);color:#fff;text-decoration:none;font:700 17px var(--b);padding:14px 24px;border-radius:12px;border:0;cursor:pointer}.btn.g{background:var(--gd);color:var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}.pics img{border-radius:16px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.board{background:#fff;border-radius:22px;padding:26px;border:3px solid var(--mr);box-shadow:8px 8px 0 var(--gd)}
+.board h2{font-size:26px;color:var(--mr)}.cd{display:flex;gap:10px;margin:14px 0}.cd div{flex:1;background:var(--sk);border-radius:12px;padding:10px;text-align:center}.cd b{display:block;font-family:var(--h);font-size:40px;line-height:1;color:var(--mr)}.cd span{font-size:14px;color:var(--gr)}
+.board ul{list-style:none;padding:0;margin:14px 0 0}.board li{padding:10px 0;border-top:1px solid var(--ln);font-size:16px}.board li b{color:var(--mr)}
+section{padding:80px 0}.sh{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px;margin-bottom:28px}.sh h2{font-size:clamp(34px,4.2vw,50px);color:var(--mr)}.sh p{color:var(--gr);margin:6px 0 0;max-width:34em}
+.flt{display:flex;flex-wrap:wrap;gap:8px}.flt button{font:700 16px var(--b);background:#fff;border:2px solid var(--ln);border-radius:30px;padding:7px 16px;cursor:pointer;color:var(--ink)}.flt button[aria-pressed=true]{background:var(--mr);color:#fff;border-color:var(--mr)}
+.news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.nw{border:2px solid var(--ln);border-radius:18px;padding:22px;display:flex;flex-direction:column}.nw .c{display:inline-block;font-size:14px;font-weight:700;padding:2px 12px;border-radius:20px;background:var(--sk);color:var(--mr);align-self:flex-start}.nw .c.Sport{background:#E3F5E6;color:#1D6B32}.nw .c.Trips{background:#FFF3D6;color:#7A5300}.nw .c.Arts{background:#F7E4F0;color:#8A2468}
+.nw h3{font-size:23px;margin:12px 0 6px}.nw p{margin:0;color:var(--gr);font-size:16px;flex:1}.nw time{font-size:14px;color:var(--gr);margin-top:12px}
+.ev{background:var(--sk)}.eg{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}.eg>div{min-width:0}
+.el{list-style:none;padding:0;margin:0}.el li{display:grid;grid-template-columns:70px 1fr;gap:16px;background:#fff;border-radius:16px;padding:14px 16px;margin-bottom:10px;align-items:center}
+.el .d{background:var(--mr);color:#fff;border-radius:12px;text-align:center;padding:6px 0;line-height:1.1}.el .d b{display:block;font-family:var(--h);font-size:28px}.el .d span{font-size:13px}
+.el h3{font-size:20px}.el p{margin:2px 0 0;font-size:15px;color:var(--gr)}
+.adm .steps{list-style:none;padding:0;margin:0;counter-reset:s}.adm .steps li{counter-increment:s;display:grid;grid-template-columns:54px 1fr;gap:16px;padding:14px 0}
+.adm .steps li:before{content:counter(s);width:50px;height:50px;border-radius:50%;background:var(--gd);display:grid;place-items:center;font-family:var(--h);font-size:24px;font-weight:800}
+.adm .steps h3{font-size:22px}.adm .steps p{margin:2px 0 0;color:var(--gr);font-size:16px}
+.terms{overflow-x:auto}.terms table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;min-width:520px}.terms th,.terms td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--ln);font-size:16px}.terms th{background:var(--mr);color:#fff;font-weight:700}
+.terms tr.hol td{background:#FFF7E3}.terms tr.next td{background:var(--gd);font-weight:700}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.visit img{border-radius:22px;width:100%;aspect-ratio:3/2;object-fit:cover}
+footer{background:var(--mr);color:#F4DCE3;padding:34px 0;font-size:15px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}footer a{color:#fff}
+@media (max-width:960px){.hero .wrap,.eg,.visit .wrap{grid-template-columns:1fr}.news{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.burger{display:block}.menu{display:none;position:absolute;top:86px;left:0;right:0;background:var(--mr);flex-direction:column;padding:18px 22px;z-index:30}.menu.open{display:flex}.news{grid-template-columns:1fr}.board{box-shadow:5px 5px 0 var(--gd)}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
