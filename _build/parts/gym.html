@@ -1,0 +1,41 @@
+<main id="main">
+<section class="hero" style="padding:0" aria-labelledby="h1"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=2000&q=75&auto=format&fit=crop" alt="" width="2000" height="1333" fetchpriority="high">
+<header class="wrap nav" style="width:100%"><a href="#" class="logo">Foundry<span>.</span></a><nav aria-label="Main"><ul class="menu" id="menu"><li><a href="#classes">Classes</a></li><li><a href="#plans">Membership</a></li><li><a href="#bmi">BMI check</a></li><li><a href="#coaches">Coaches</a></li></ul></nav><button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button></header>
+<div class="wrap hc"><h1 id="h1">Get strong. <span>Stay strong.</span></h1><p>A strength gym in Leeds with free weights, 42 classes a week and coaches who learn your name. Open 5am to 11pm, every day.</p><div class="row"><a class="btn" href="#classes">Book a free class</a><a class="btn w" href="#plans">See prices</a></div></div></section>
+<div class="band" aria-label="Key facts"><div class="wrap"><span>No joining fee</span><span>Cancel any time</span><span>First class free</span><span>Open 18 hours a day</span></div></div>
+
+<section id="classes" aria-labelledby="c1"><div class="wrap"><div class="sh"><h2 id="c1">Class timetable</h2><p>Pick a day and book your spot. Classes are 45 minutes unless it says otherwise. Bring a towel and water.</p></div>
+<div class="days" id="days" role="group" aria-label="Choose a day"></div><div class="tt" id="tt" aria-live="polite"></div></div></section>
+
+<section class="plans" id="plans" aria-labelledby="p1"><div class="wrap"><div class="sh"><h2 id="p1">Membership</h2><div class="tog" role="group" aria-label="Billing period"><button type="button" aria-pressed="true" data-b="m">Monthly</button><button type="button" aria-pressed="false" data-b="y">Yearly, save 2 months</button></div></div>
+<div class="pg"><div class="pl"><h3>Off-peak</h3><div class="pr" data-m="24" data-y="240">£24<small>/mo</small></div><p class="note"></p><ul><li>Gym floor, 9am to 4pm on weekdays</li><li>All day at weekends</li><li>Free induction with a coach</li></ul><a class="btn" href="#join">Join off-peak</a></div>
+<div class="pl hot"><h3>Full access</h3><div class="pr" data-m="39" data-y="390">£39<small>/mo</small></div><p class="note"></p><ul><li>Gym floor any time we're open</li><li>Unlimited classes</li><li>Monthly check-in with a coach</li><li>Bring a friend free once a month</li></ul><a class="btn" href="#join">Join full access</a></div>
+<div class="pl"><h3>Coached</h3><div class="pr" data-m="89" data-y="890">£89<small>/mo</small></div><p class="note"></p><ul><li>Everything in full access</li><li>4 one-to-one sessions a month</li><li>Written training plan, updated monthly</li></ul><a class="btn" href="#join">Join coached</a></div></div></div></section>
+
+<section class="bmi" id="bmi" aria-labelledby="b1"><div class="wrap"><div><h2 id="b1" style="font-size:clamp(46px,6vw,84px)">Quick BMI check</h2><p style="color:var(--gr);font-size:18px;max-width:30em">BMI is a rough guide, not the full picture. It doesn't know how much muscle you carry. Our coaches use it as one number among many when we set your goals.</p></div>
+<form id="bf" aria-label="BMI calculator"><div class="fr"><div><label for="hgt">Height (cm)</label><input id="hgt" type="number" min="120" max="230" value="175"></div><div><label for="wgt">Weight (kg)</label><input id="wgt" type="number" min="30" max="250" value="78"></div></div>
+<div class="res" aria-live="polite"><b id="bv">25.5</b><p id="bt"></p></div><div class="scale" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="mk" id="mk"></span></div><div class="lg"><span>Under 18.5</span><span>18.5 to 25</span><span>25 to 30</span><span>30 and over</span></div></form></div></section>
+
+<section class="coach" id="coaches" aria-labelledby="t1"><div class="wrap"><div class="sh"><h2 id="t1">Coaches</h2><p>Every coach holds a Level 3 qualification and first aid training.</p></div>
+<div class="cg"><div class="co"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=700&q=75&auto=format&fit=crop" alt="Coach doing a dumbbell curl" width="700" height="875" loading="lazy"><h3>Marcus</h3><p>Strength and powerlifting. Runs the Saturday barbell club.</p></div>
+<div class="co"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=75&auto=format&fit=crop" alt="Coach doing a core exercise on a mat" width="700" height="875" loading="lazy"><h3>Priya</h3><p>Olympic lifting and mobility. Great with complete beginners.</p></div>
+<div class="co"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=700&q=75&auto=format&fit=crop" alt="Coach training with a barbell on her shoulders" width="700" height="875" loading="lazy"><h3>Jo</h3><p>Conditioning and HIIT. Leads the 6am classes most mornings.</p></div></div></div></section>
+</main>
+<footer id="join"><div class="wrap"><p>© <span id="yr"></span> Foundry Strength Club, 88 Kirkstall Road, Leeds. 0113 555 0184</p><p><a href="https://unsplash.com">Photos: Unsplash</a> &nbsp;|&nbsp; <a href="https://mmrahmanbappi.github.io/free-html-templates/">More free templates</a></p></div></footer>
+<script>
+(()=>{const $=id=>document.getElementById(id);const D=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const C=[["06:00","HIIT Burn","Jo",3,14],["07:15","Barbell Basics","Marcus",2,12],["12:30","Lunch Express (30 min)","Priya",2,16],["17:30","Strength Circuit","Marcus",3,14],["18:45","Mobility Flow","Priya",1,18],["19:30","Boxing Fit","Jo",3,16]];
+const tt={};D.forEach((d,i)=>{tt[d]=C.filter((c,j)=>(i+j)%6!==0||i===5).slice(0,i>4?4:5).map((c,j)=>({t:i>4?["08:00","09:30","11:00","12:30"][j]:c[0],n:c[1],c:c[2],lv:c[3],left:(i*3+j*5)%9,b:false}))});
+let day=D[(new Date().getDay()+6)%7];
+function draw(){$('days').innerHTML=D.map(d=>`<button type="button" aria-pressed="${d===day}">${d}</button>`).join('');
+$('tt').innerHTML=tt[day].map((c,i)=>`<div class="cl"><span class="t">${c.t}</span><div><h3>${c.n}</h3><small>with ${c.c}</small></div><span class="lv" aria-label="Intensity ${c.lv} of 3">${[1,2,3].map(n=>`<i class="${n<=c.lv?'on':''}"></i>`).join('')} ${['','Easy','Medium','Hard'][c.lv]}</span><span class="sp ${c.left<3?'low':''}">${c.left?c.left+' spots left':'Full, join waitlist'}</span><button type="button" data-i="${i}" aria-pressed="${c.b}" ${!c.left&&!c.b?'':''}>${c.b?'Booked ✓':c.left?'Book':'Waitlist'}</button></div>`).join('')}
+$('days').onclick=e=>{const b=e.target.closest('button');if(!b)return;day=b.textContent;draw()};
+$('tt').onclick=e=>{const b=e.target.closest('button');if(!b)return;const c=tt[day][b.dataset.i];if(c.b){c.b=false;c.left++}else{c.b=true;if(c.left)c.left--}draw()};draw();
+document.querySelector('.tog').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('.tog button').forEach(x=>x.setAttribute('aria-pressed',x===b));const y=b.dataset.b==='y';
+document.querySelectorAll('.pl').forEach(p=>{const pr=p.querySelector('.pr');pr.innerHTML=y?`£${pr.dataset.y}<small>/yr</small>`:`£${pr.dataset.m}<small>/mo</small>`;p.querySelector('.note').textContent=y?`That's £${(pr.dataset.y/12).toFixed(2)} a month, paid once a year.`:''})};
+function bmi(){const h=+$('hgt').value/100,w=+$('wgt').value;if(!h||!w)return;const v=w/(h*h);$('bv').textContent=v.toFixed(1);
+const [t,m]=v<18.5?['Below the healthy range. A coach can help you build strength and weight safely.','under']:v<25?['In the healthy range. Nice. Keep training and eating well.','ok']:v<30?['A little above the healthy range. Regular training and small food changes make a real difference.','over']:['Above the healthy range. Talk to your GP, and we can build a gentle plan together.','high'];
+$('bt').textContent=t;$('mk').style.left=Math.min(100,Math.max(0,(v-10)/30*100))+'%'}
+['hgt','wgt'].forEach(i=>$(i).addEventListener('input',bmi));$('bf').onsubmit=e=>e.preventDefault();bmi();
+})();
+</script>

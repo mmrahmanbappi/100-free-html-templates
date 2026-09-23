@@ -49,10 +49,19 @@
    "name": "Restaurant & Food",
    "title": "",
    "desc": "",
-   "intro": "Websites for restaurants, cafes, bakeries and food delivery, with working menus, table booking, order-ahead builders and opening hours that show if you're open right now.",
+   "intro": "Websites for restaurants, cafes, bakeries, bars, food trucks, caterers and recipe blogs, with working menus, table booking, price calculators and opening hours that show if you're open right now.",
    "noun": "Website Templates",
    "plural": "restaurant and food sites",
-   "short": "restaurant sites"
+   "short": "restaurant"
+  },
+  "health-fitness": {
+   "name": "Health & Fitness",
+   "title": "",
+   "desc": "",
+   "intro": "Websites for gyms, yoga studios, personal trainers, dentists, clinics and spas. Each one has a working booking tool, clear prices and opening hours, so clients can pick a time without phoning.",
+   "noun": "Website Templates",
+   "plural": "health and fitness sites",
+   "short": "fitness"
   }
  },
  "themes": [
@@ -1066,6 +1075,185 @@
    "fonts": "Titan One + Rubik",
    "colors": "Tomato red, cheese yellow, black",
    "keywords": "pizza website template, pizza delivery HTML template free, pizzeria website template"
+  },
+  {
+   "cat": "restaurant",
+   "slug": "food-truck",
+   "name": "Cactus & Coal",
+   "type": "Food Truck",
+   "desc": "A bright taco truck site. The hero shows where the truck is parked today and if it's serving right now, the week strip shows every stop, and the event form works out a price as you type.",
+   "sections": [
+    "Hero with today's location and live serving status",
+    "Weekly schedule with today highlighted",
+    "Tap a day to see address and hours",
+    "Menu with tabs",
+    "Private event booking with price estimate",
+    "FAQ"
+   ],
+   "fonts": "Lilita One + Overpass",
+   "colors": "Turquoise, marigold, night navy",
+   "keywords": "food truck website template, taco truck HTML template free, street food website template"
+  },
+  {
+   "cat": "restaurant",
+   "slug": "bar-lounge",
+   "name": "The Green Lamp",
+   "type": "Bar and Lounge",
+   "desc": "A dark, art deco cocktail bar. The cocktail list filters by spirit and strength, a live clock counts down to happy hour, and the events calendar lets guests save a seat.",
+   "sections": [
+    "Age notice bar",
+    "Split hero with happy hour countdown",
+    "Cocktail list with spirit and strength filters",
+    "Photo strip",
+    "Events calendar with save a seat",
+    "Opening hours with today highlighted"
+   ],
+   "fonts": "Limelight + Hanken Grotesk",
+   "colors": "Bottle green, peach, cream, berry red",
+   "keywords": "bar website template, cocktail bar HTML template free, lounge website template"
+  },
+  {
+   "cat": "restaurant",
+   "slug": "catering",
+   "name": "Long Table Catering",
+   "type": "Catering",
+   "desc": "A calm catering site in olive and fig. Pick a package, drag the guest slider and tick extras, and the price updates line by line, then drops straight into the quote form.",
+   "sections": [
+    "Collage hero with key numbers",
+    "Event types",
+    "Per-guest price calculator with add-ons",
+    "Live price breakdown",
+    "Sample menus",
+    "Quote request form"
+   ],
+   "fonts": "Gilda Display + Rethink Sans",
+   "colors": "Olive green, fig, sage, charcoal",
+   "keywords": "catering website template, catering HTML template free, event catering website template"
+  },
+  {
+   "cat": "restaurant",
+   "slug": "recipe-blog",
+   "name": "Salt & Stove",
+   "type": "Recipe Blog",
+   "desc": "A friendly home cook's recipe blog. Search and filter recipes, open one in cook mode, change the servings and watch every amount update, then tick off steps as you cook.",
+   "sections": [
+    "Featured recipe hero",
+    "Recipe search",
+    "Filters for quick, vegetarian, one pot and breakfast",
+    "Recipe cards",
+    "Servings scaler",
+    "Cook mode step checklist with progress bar",
+    "About the cook and newsletter"
+   ],
+   "fonts": "Alegreya + Alegreya Sans",
+   "colors": "Kale green, mustard, white",
+   "keywords": "recipe blog template, food blog HTML template free, recipe website template"
+  },
+  {
+   "cat": "health-fitness",
+   "slug": "gym-fitness",
+   "name": "Foundry Strength Club",
+   "type": "Gym and Fitness",
+   "desc": "A loud strength gym site in cobalt and chalk. Switch days on the class timetable and book a spot, flip membership prices to yearly, and check your BMI on a live scale.",
+   "sections": [
+    "Full-bleed photo hero with huge type",
+    "Key facts band",
+    "Class timetable with day tabs and booking",
+    "Membership plans with monthly and yearly toggle",
+    "BMI calculator with colour scale",
+    "Coaches"
+   ],
+   "fonts": "Big Shoulders Display + Libre Franklin",
+   "colors": "Cobalt blue, chalk white, black",
+   "keywords": "gym website template, fitness HTML template free, gym class timetable template"
+  },
+  {
+   "cat": "health-fitness",
+   "slug": "yoga-studio",
+   "name": "Slow Tide Yoga",
+   "type": "Yoga Studio",
+   "desc": "A soft sea-glass yoga studio. The hero is a one-minute guided breathing timer, the weekly schedule filters by level, and a four-week path helps total beginners start.",
+   "sections": [
+    "Hero with guided breathing timer",
+    "Weekly class schedule with level filter",
+    "Beginner path",
+    "Class passes and prices",
+    "Visit us"
+   ],
+   "fonts": "Bellefair + Commissioner",
+   "colors": "Deep teal, sea glass, sand, saffron",
+   "keywords": "yoga studio website template, yoga HTML template free, yoga class schedule template"
+  },
+  {
+   "cat": "health-fitness",
+   "slug": "personal-trainer",
+   "name": "Dara Mensah",
+   "type": "Personal Trainer",
+   "desc": "A bold personal trainer site in navy and coral. A three-question quiz picks the right programme, client stories flip between week 1 and final week numbers, and booking has time slots.",
+   "sections": [
+    "Big italic type hero",
+    "Programme finder quiz",
+    "Programme cards",
+    "Client progress stories with before and after numbers",
+    "Consult booking with time slots"
+   ],
+   "fonts": "Kanit + Inclusive Sans",
+   "colors": "Navy, coral, sky blue",
+   "keywords": "personal trainer website template, fitness coach HTML template free, PT website template"
+  },
+  {
+   "cat": "health-fitness",
+   "slug": "dental-clinic",
+   "name": "Brightwater Dental",
+   "type": "Dental Clinic",
+   "desc": "A fresh, friendly dental practice. Treatments show clear prices by type, patients pick a day and time for their visit, and the insurance checker explains what their plan usually covers.",
+   "sections": [
+    "Emergency phone bar",
+    "Hero with next free appointment",
+    "Treatments and prices with tabs",
+    "Appointment day and time picker with summary",
+    "Insurance checker",
+    "Patient FAQ"
+   ],
+   "fonts": "Varela Round + Assistant",
+   "colors": "Aqua, deep blue, mint white, coral",
+   "keywords": "dental clinic website template, dentist HTML template free, dental practice website template"
+  },
+  {
+   "cat": "health-fitness",
+   "slug": "medical-clinic",
+   "name": "Parkside Family Clinic",
+   "type": "Medical Clinic",
+   "desc": "A calm family doctor's clinic. It shows if the clinic is open right now and when it opens next, doctors filter by specialty, and each doctor card fills in the booking form.",
+   "sections": [
+    "Emergency notice bar",
+    "Hero with quick actions and open now status",
+    "Services",
+    "Doctor profiles with specialty filter",
+    "Opening hours with today highlighted",
+    "Appointment request form"
+   ],
+   "fonts": "Merriweather + Merriweather Sans",
+   "colors": "Pine green, warm white, soft blue, red",
+   "keywords": "medical clinic website template, doctor HTML template free, healthcare website template"
+  },
+  {
+   "cat": "health-fitness",
+   "slug": "spa-salon",
+   "name": "Alma Spa",
+   "type": "Spa and Salon",
+   "desc": "A warm rosewood spa and salon. Add massages, facials, hair and nails to one visit and see the total time and price, then design a gift voucher and watch the card update.",
+   "sections": [
+    "Arched split hero",
+    "Treatment menu with tabs and durations",
+    "Visit basket with total time and price",
+    "Booking form",
+    "Gift voucher builder with live preview",
+    "Visit us"
+   ],
+   "fonts": "Forum + Raleway",
+   "colors": "Rosewood, blush, olive grey",
+   "keywords": "spa website template, beauty salon HTML template free, massage spa website template"
   }
  ]
 }

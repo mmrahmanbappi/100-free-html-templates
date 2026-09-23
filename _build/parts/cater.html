@@ -1,0 +1,52 @@
+<header><nav class="wrap nav" aria-label="Main"><a href="#" class="logo">Long Table<small>Catering in Denver since 2012</small></a><ul class="menu" id="menu"><li><a href="#events">Events</a></li><li><a href="#price">Price calculator</a></li><li><a href="#menus">Menus</a></li><li><a href="#quote" class="cta">Get a quote</a></li></ul><button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button></nav></header>
+<main id="main">
+<section class="hero" aria-labelledby="h1"><div class="wrap"><div><h1 id="h1">Good food for the whole table, from 20 guests to 400.</h1><p>We cook, deliver, serve and clean up, so you can stay with your guests. Seasonal menus from Colorado farms, cooked fresh on the day.</p><div class="row"><a class="btn" href="#price">Work out your price</a><a class="btn l" href="#menus">See the menus</a></div>
+<div class="note"><div><b>1,900+</b>events catered</div><div><b>4.9 of 5</b>from 310 reviews</div><div><b>48 hrs</b>to get your quote</div></div></div>
+<div class="col"><img class="a" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=75&auto=format&fit=crop" alt="Long banquet table set with flowers, glasses and candles" width="900" height="650" fetchpriority="high"><img class="b" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=700&q=75&auto=format&fit=crop" alt="Overhead view of shared plates of food on a table" width="700" height="520"><img class="c" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&q=75&auto=format&fit=crop" alt="Plated salmon with greens" width="500" height="470"></div></div></section>
+
+<section id="events" aria-labelledby="t1"><div class="wrap"><div class="sh"><h2 id="t1">Events we cater</h2><p>Every event gets a named event lead who visits the venue with you before the day.</p></div>
+<div class="types"><div class="ty"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14" cy="16" r="7" fill="none" stroke="#7A3B52" stroke-width="2"/><circle cx="26" cy="16" r="7" fill="none" stroke="#7A3B52" stroke-width="2"/><path d="M8 34c2-6 22-6 24 0" stroke="#4F5A2E" stroke-width="2" fill="none"/></svg><h3>Weddings</h3><p>Canapés during photos, a sit-down dinner and late night snacks.</p><span>Usually 60 to 200 guests</span></div>
+<div class="ty"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="10" width="28" height="22" rx="2" fill="none" stroke="#7A3B52" stroke-width="2"/><path d="M6 17h28" stroke="#4F5A2E" stroke-width="2"/></svg><h3>Office lunches</h3><p>Boxed lunches or a hot buffet, set up before your meeting starts.</p><span>Usually 20 to 120 guests</span></div>
+<div class="ty"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6v8M12 34h16M14 14h12l-2 20h-8z" fill="none" stroke="#7A3B52" stroke-width="2"/></svg><h3>Parties</h3><p>Birthdays, anniversaries and graduations at home or in a hired hall.</p><span>Usually 30 to 100 guests</span></div>
+<div class="ty"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 32h24M12 32V14l8-6 8 6v18" fill="none" stroke="#7A3B52" stroke-width="2"/><path d="M18 32v-8h4v8" stroke="#4F5A2E" stroke-width="2" fill="none"/></svg><h3>Conferences</h3><p>Breakfast, lunch and coffee breaks across one or several days.</p><span>Usually 100 to 400 guests</span></div></div></div></section>
+
+<section class="calc" id="price" aria-labelledby="c1"><div class="wrap"><div class="sh"><h2 id="c1">Work out your price</h2><p>Choose a package, set your guest count and add extras. The total updates as you go. Prices include food, delivery and setup.</p></div>
+<div class="cg"><div><fieldset><legend>1. Choose a package</legend><div class="pk" id="pk">
+<label><input type="radio" name="pk" value="28" data-n="Canapé reception" checked><b>Canapé reception</b><i>$28 a guest</i><small>8 bites per person, passed around by our staff</small></label>
+<label><input type="radio" name="pk" value="46" data-n="Family-style feast"><b>Family-style feast</b><i>$46 a guest</i><small>Big sharing platters on every table, 3 mains</small></label>
+<label><input type="radio" name="pk" value="62" data-n="Plated dinner"><b>Plated dinner</b><i>$62 a guest</i><small>Starter, main and dessert served to each seat</small></label></div></fieldset>
+<fieldset><legend>2. How many guests?</legend><div class="rg"><input type="range" id="gs" min="20" max="400" step="5" value="80" aria-label="Number of guests"><output id="go" for="gs">80</output></div></fieldset>
+<fieldset class="ad"><legend>3. Add extras</legend>
+<label><input type="checkbox" data-p="8" data-per="1" data-n="Dessert table"><span>Dessert table with cakes, tarts and fruit</span><em>+$8 a guest</em></label>
+<label><input type="checkbox" data-p="14" data-per="1" data-n="Drinks package"><span>Soft drinks, lemonade, coffee and tea all evening</span><em>+$14 a guest</em></label>
+<label><input type="checkbox" data-p="350" data-per="0" data-n="Tableware hire"><span>Plates, glasses, cutlery and linen hire</span><em>+$350</em></label>
+<label><input type="checkbox" data-p="450" data-per="0" data-n="Late night snacks"><span>Late night sliders and fries for everyone</span><em>+$450</em></label></fieldset></div>
+<aside class="sum" aria-live="polite"><h3>Your estimate</h3><ul id="lines"></ul><div class="tot"><span>Total</span><b id="tot">$0</b></div><p class="pg" id="pg"></p><a class="btn" href="#quote" id="useq">Use this in my quote</a></aside></div></div></section>
+
+<section class="menus" id="menus" aria-labelledby="m1"><div class="wrap"><div class="sh"><h2 id="m1">Sample menus</h2><p>These change with the seasons. We can cook for vegan, gluten-free, halal and nut-free guests at no extra cost.</p></div>
+<div class="mg"><div class="mc"><img src="https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=700&q=75&auto=format&fit=crop" alt="Table of small plates and shared dishes outdoors" width="700" height="525" loading="lazy"><h3>Canapé reception</h3><ul><li>Beet and goat cheese tartlets</li><li>Chicken satay with peanut sauce</li><li>Smoked trout on rye</li><li>Mushroom arancini</li><li>Mini lemon meringue pies</li></ul></div>
+<div class="mc"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=700&q=75&auto=format&fit=crop" alt="Long table with flowers and food at an event" width="700" height="525" loading="lazy"><h3>Family-style feast</h3><ul><li>Slow roast lamb shoulder with herbs</li><li>Chicken with lemon and olives</li><li>Roast squash and farro salad</li><li>Warm focaccia and whipped butter</li><li>Charred greens with chilli</li></ul></div>
+<div class="mc"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=700&q=75&auto=format&fit=crop" alt="Sliced steak with fries on a white plate" width="700" height="525" loading="lazy"><h3>Plated dinner</h3><ul><li>Burrata, peach and basil</li><li>Beef sirloin, potato, red wine sauce</li><li>Or wild mushroom risotto (vegan option)</li><li>Dark chocolate tart with cream</li></ul></div></div></div></section>
+
+<section class="quote" id="quote" aria-labelledby="q1"><div class="wrap qg"><div><div class="sh"><h2 id="q1">Ask for a quote</h2><p>Tell us about your event. You'll hear back from an event lead within 48 hours with a full menu and a fixed price.</p></div>
+<blockquote>"They fed 140 people at our wedding in a field with no kitchen. Hot food, on time, and they left the barn cleaner than they found it."<footer>Wedding couple, Boulder, June</footer></blockquote></div>
+<form action="https://formspree.io/f/your-form-id" method="POST" id="qf" aria-label="Quote request"><div class="fr"><div><label for="qn">Name</label><input id="qn" name="name" required autocomplete="name"></div><div><label for="qe">Email</label><input id="qe" name="email" type="email" required autocomplete="email"></div></div>
+<div class="fr"><div><label for="qt">Type of event</label><select id="qt" name="event"><option>Wedding</option><option>Office lunch</option><option>Party</option><option>Conference</option><option>Something else</option></select></div><div><label for="qd">Date</label><input id="qd" name="date" type="date" required></div></div>
+<label for="qs">Your estimate</label><input id="qs" name="estimate" readonly>
+<label for="qm">Venue and anything else</label><textarea id="qm" name="message" rows="4" placeholder="Venue name, kitchen access, dietary needs"></textarea>
+<button class="btn" type="submit">Send my quote request</button><p class="msg" id="qmsg" role="status"></p></form></div></section>
+</main>
+<footer class="ft"><div class="wrap"><p>© <span id="yr"></span> Long Table Catering, 2200 Larimer St, Denver. (720) 555-0133</p><p><a href="https://unsplash.com">Photos: Unsplash</a> &nbsp;|&nbsp; <a href="https://mmrahmanbappi.github.io/free-html-templates/">More free templates</a></p></div></footer>
+<script>
+(()=>{const $=id=>document.getElementById(id),f=n=>'$'+Math.round(n).toLocaleString('en-US');
+function calc(){const p=document.querySelector('#pk input:checked'),g=+$('gs').value;$('go').textContent=g;
+const staff=Math.ceil(g/25);const L=[[`${p.dataset.n}, ${g} guests at $${p.value}`,g*p.value],[`Serving staff (${staff} ${staff>1?'people':'person'}, 1 per 25 guests)`,staff*180]];
+document.querySelectorAll('.ad input:checked').forEach(c=>L.push([c.dataset.n,c.dataset.per==='1'?g*c.dataset.p:+c.dataset.p]));
+const t=L.reduce((a,l)=>a+l[1],0);$('lines').innerHTML=L.map(l=>`<li><span>${l[0]}</span><span>${f(l[1])}</span></li>`).join('');$('tot').textContent=f(t);$('pg').textContent=`That's about ${f(t/g)} per guest, before tax.`;
+$('qs').value=`${p.dataset.n}, ${g} guests, about ${f(t)}`}
+document.querySelectorAll('#pk input,.ad input,#gs').forEach(i=>i.addEventListener('input',calc));calc();
+$('useq').addEventListener('click',()=>{calc();setTimeout(()=>$('qn').focus(),400)});
+const d=new Date(Date.now()+60*864e5);$('qd').value=d.toISOString().slice(0,10);$('qd').min=new Date().toISOString().slice(0,10);
+$('qf').onsubmit=e=>{e.preventDefault();const m=$('qmsg');m.textContent=`Thanks ${$('qn').value}. Your request is in. An event lead will email you within 48 hours.`;m.classList.add('on')};
+})();
+</script>
