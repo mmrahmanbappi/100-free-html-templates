@@ -317,7 +317,17 @@ function page(string $title, string $desc, string $canon, string $h1, string $in
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316181F'/><text x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23FFC53D'>100</text></svg>">
 $ld
-<style>$CSS$MMCSS</style></head><body>
+<style>$CSS$MMCSS</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D8QGLFQD12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D8QGLFQD12');
+</script>
+</head><body>
 <a class="skip" href="#templates">Skip to templates</a>
 <header class="wrap top"><a class="brand" href="$BASE"><i>100</i>Free HTML Templates</a><nav aria-label="Main"><a href="{$BASE}#templates">Templates</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="https://mmrahmanbappi.github.io/">All projects</a><a class="gh" href="$REPO">GitHub</a></nav></header>
 <section class="hero" aria-labelledby="h1"><div class="wrap hg"><div>{$crumb}<span class="kick"><b>Free</b>MIT license, no sign up</span><h1 id="h1">$h1</h1><p class="lead">$ei</p><div class="btns"><a class="btn" href="#templates">Browse the templates</a><a class="btn l" href="#how">How to use them</a></div>{$stats}</div>{$wall}</div></section>
