@@ -14,19 +14,26 @@ jobs:
       - name: This repo is HTML, CSS and JavaScript only
         run: |
           found=$(git ls-files | grep -Ei '\.(py|pyc|pyw|ipynb)$|(^|/)(requirements\.txt|pyproject\.toml|Pipfile|setup\.py)$' || true)
-          if [ -n "$found" ]; then
-            echo "::error::Python files are not allowed in this repo. Remove them and use the PHP scripts in scripts/ instead:"
-            echo "$found"
+          if [ -z "$found" ]; then echo "No Python files found."; exit 0; fi
+          echo "Python files found:"; echo "$found"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "::error::Python files are not allowed in this repo. Use the PHP scripts in scripts/ instead."
             exit 1
           fi
-          echo "No Python files found."
+          echo "::warning::Removing Python files. This repo is HTML, CSS and JavaScript only."
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          echo "$found" | xargs git rm -q --cached --
+          echo "$found" | xargs rm -f --
+          git commit -m "Remove Python files (this repo is HTML, CSS and JavaScript only)"
+          git push
   build:
     needs: no-python
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+        with: { fetch-depth: 0, ref: main }
       - uses: shivammathur/setup-php@v2
         with: { php-version: "8.3", extensions: "mbstring, gd" }
       - name: Build gallery, category pages, README files and sitemap

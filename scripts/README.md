@@ -26,4 +26,4 @@ php scripts/screenshot.php --all
 
 ## No Python
 
-This repo is HTML, CSS and JavaScript only. Python files are listed in `.gitignore`, and a check on GitHub stops any push or pull request that adds them.
+This repo is HTML, CSS and JavaScript only. Python files are listed in `.gitignore`. If one still reaches `main`, GitHub removes it automatically, and pull requests that add Python fail the check.
