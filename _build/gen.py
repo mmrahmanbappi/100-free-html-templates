@@ -107,61 +107,125 @@ MIT. Use it for personal or commercial projects. A link back is nice but not req
 """
     open(f"{root}{t['cat']}/{t['slug']}/README.md",'w').write(md)
 
-CSS="""*{box-sizing:border-box}body{margin:0;font-family:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;color:#141A26;background:#F4F5F7;line-height:1.6;font-size:17px}
-a{color:inherit}.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-header{background:#141A26;color:#fff;padding:64px 0 60px}header h1{font-size:clamp(32px,5vw,56px);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em;max-width:22ch}
-header p{font-size:19px;color:#C4CAD6;max-width:62ch;margin:0}.crumb{font-size:15px;color:#8E97A8;margin-bottom:18px}.crumb a{color:#fff}
-.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.meta a{background:#fff;color:#141A26;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:10px}.meta a.alt{background:transparent;color:#fff;border:1px solid #3A4458}
-.perks{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px;color:#C4CAD6;font-size:15px;padding:0;list-style:none}.perks li::before{content:"✓ ";color:#7FB2FF;font-weight:700}
-main{padding:56px 0 40px}h2{font-size:28px;margin:0 0 6px}.sub{color:#5B6475;margin:0 0 26px}
-.cats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px}.cats a{background:#fff;border:1px solid #DDE1E8;border-radius:999px;padding:8px 16px;text-decoration:none;font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px;margin-bottom:56px}
-.card{background:#fff;border:1px solid #DDE1E8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-.card img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid #DDE1E8}
-.card .body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}.card h3{margin:0 0 4px;font-size:20px}.card .type{color:#2F6BFF;font-weight:700;font-size:14px}
-.card p{color:#5B6475;font-size:15px;margin:10px 0 18px}.links{margin-top:auto;display:flex;gap:10px}.links a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:10px;border-radius:9px;border:1px solid #DDE1E8;font-size:15px}.links a:first-child{background:#2F6BFF;color:#fff;border-color:#2F6BFF}
-.faq{max-width:820px;margin:20px 0 40px}.faq details{background:#fff;border:1px solid #DDE1E8;border-radius:12px;padding:18px 22px;margin-bottom:10px}.faq summary{font-weight:700;cursor:pointer}.faq p{margin:10px 0 0;color:#3E4757}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:10px 0 56px}.how div{background:#fff;border:1px solid #DDE1E8;border-radius:14px;padding:22px}.how b{display:block;font-size:18px;margin-bottom:6px}.how p{margin:0;color:#5B6475;font-size:15px}
-footer{border-top:1px solid #DDE1E8;padding:28px 0;color:#5B6475;font-size:14px}
-@media (max-width:760px){.how{grid-template-columns:1fr}}@media (max-width:520px){.grid{grid-template-columns:1fr}}"""
-
+import glob as _g
+COL={}
+for _f in _g.glob('/home/claude/parts/*.json'):
+    try:
+        _j=json.load(open(_f));COL[_j['slug']]=_j.get('color','#3D5AFE')
+    except Exception: pass
+CSS="""*,*::before,*::after{box-sizing:border-box}[hidden]{display:none!important}
+:root{--ink:#16181F;--ink2:#2A2D38;--mu:#5E6372;--bg:#EDEFF3;--card:#fff;--ln:#DADDE5;--ac:#3D5AFE;--ac2:#2C45D6;--yl:#FFC53D;--h:"Bricolage Grotesque",system-ui,sans-serif;--b:"Hanken Grotesk",system-ui,sans-serif}
+html{scroll-behavior:smooth}body{margin:0;font-family:var(--b);color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+img{max-width:100%;height:auto;display:block}a{color:inherit}.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;background:var(--yl);padding:8px;z-index:99}:focus-visible{outline:3px solid var(--yl);outline-offset:2px}
+h1,h2,h3{font-family:var(--h);margin:0;letter-spacing:-.02em}
+.top{display:flex;justify-content:space-between;align-items:center;height:70px;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-family:var(--h);font-weight:800;font-size:20px;text-decoration:none}
+.brand i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--yl);font-style:normal;font-size:15px}
+.top nav{display:flex;gap:22px;font-weight:600;font-size:15px}.top nav a{text-decoration:none}.top nav a:hover{color:var(--ac)}
+.hero{padding:26px 0 70px;overflow:hidden}.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}.hg>*{min-width:0}
+.crumb{font-size:15px;color:var(--mu);margin-bottom:14px}.crumb a{color:var(--ac);font-weight:600}
+.kick{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--ln);border-radius:40px;padding:6px 14px 6px 8px;font-size:14px;font-weight:600;margin-bottom:22px}.kick b{background:var(--yl);border-radius:20px;padding:2px 10px}
+.hero h1{font-size:clamp(46px,6.6vw,92px);line-height:.95;font-weight:800}.hero h1 .num{display:block;font-size:1.55em;line-height:.85;color:transparent;-webkit-text-stroke:2.5px var(--ink);letter-spacing:-.04em}
+.hero h1 .hl{background:linear-gradient(transparent 62%,var(--yl) 62% 92%,transparent 92%)}
+.hero p.lead{font-size:20px;color:var(--mu);max-width:34em;margin:22px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;text-decoration:none;font:700 16px var(--b);padding:14px 22px;border-radius:12px}.btn:hover{background:var(--ac)}.btn.l{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ln)}.btn.l:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;padding:0;list-style:none}.stats li{font-size:14px;color:var(--mu)}.stats b{display:block;font-family:var(--h);font-size:30px;color:var(--ink);line-height:1.1}
+.wall{height:560px;display:grid;grid-template-columns:1fr 1fr;gap:16px;-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);transform:rotate(-4deg)}
+.col{display:flex;flex-direction:column;gap:16px;animation:up 40s linear infinite}.col.b{animation-direction:reverse;animation-duration:46s}
+.col a{display:block;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 14px 30px rgba(22,24,31,.14);border:4px solid #fff;transition:transform .25s}.col a:hover{transform:scale(1.03)}.col img{aspect-ratio:16/10;object-fit:cover;object-position:top}
+@keyframes up{to{transform:translateY(-50%)}}
+.bar{position:sticky;top:0;z-index:40;background:rgba(237,239,243,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.bar .wrap{display:flex;gap:14px;align-items:center;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.srch{position:relative;flex:0 1 300px}.srch input{width:100%;font:16px var(--b);padding:11px 14px 11px 40px;border:1.5px solid var(--ln);border-radius:12px;background:#fff}.srch svg{position:absolute;left:13px;top:50%;transform:translateY(-50%)}
+.chips{display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none;padding:2px}.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;font:600 14px var(--b);background:#fff;border:1.5px solid var(--ln);border-radius:40px;padding:8px 14px;cursor:pointer;color:var(--ink);white-space:nowrap}.chips button span{color:var(--mu);font-weight:500;margin-left:4px}
+.chips button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}.chips button[aria-pressed=true] span{color:#B9BDC9}
+.count{font-size:14px;color:var(--mu);white-space:nowrap}
+main{padding:40px 0 30px}.sec{margin-bottom:64px;scroll-margin-top:90px}.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.sh h2{font-size:clamp(28px,3.4vw,42px);font-weight:800}.sh p{color:var(--mu);margin:6px 0 0;max-width:56em;font-size:16px}.sh a.all{font-weight:700;color:var(--ac);text-decoration:none;white-space:nowrap}.sh a.all:hover{text-decoration:underline}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
+.card{background:var(--card);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--ln);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(22,24,31,.12)}
+.shot{position:relative;background:var(--c);padding:12px 12px 0}.shot .chrome{display:flex;gap:5px;padding:0 4px 8px}.shot .chrome i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55)}
+.shot img{border-radius:8px 8px 0 0;aspect-ratio:16/10;object-fit:cover;object-position:top;width:100%}
+.idx{position:absolute;right:14px;top:8px;font:700 12px var(--b);color:rgba(255,255,255,.85)}
+.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}.card .ty{font-size:13px;font-weight:700;color:var(--mu);display:flex;align-items:center;gap:6px}.card .ty i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.card h3{font-size:21px;margin:4px 0 6px}.card p{color:var(--mu);font-size:15px;margin:0 0 14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card .fn{font-size:13px;color:var(--mu);margin:-6px 0 14px}.links{margin-top:auto;display:flex;gap:8px}.links a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:10px;border-radius:10px;font-size:14px;border:1.5px solid var(--ln)}
+.links a:first-child{background:var(--ink);color:#fff;border-color:var(--ink)}.links a:first-child:hover{background:var(--ac);border-color:var(--ac)}.links a:last-child:hover{border-color:var(--ink)}
+.none{background:#fff;border-radius:18px;padding:40px;text-align:center;color:var(--mu)}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:64px}.how div{background:var(--ink);color:#fff;border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.how b{display:block;font-family:var(--h);font-size:22px;margin:8px 0 6px}.how p{margin:0;color:#B9BDC9;font-size:15px}.how span{font-family:var(--h);font-weight:800;font-size:54px;line-height:1;color:var(--yl)}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:40px}.faq details{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:16px 20px}.faq summary{font-weight:700;cursor:pointer}.faq p{margin:10px 0 0;color:var(--mu);font-size:16px}
+footer{border-top:1px solid var(--ln);padding:28px 0 36px;color:var(--mu);font-size:14px}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer a{font-weight:600}
+@media (max-width:980px){.hg{grid-template-columns:1fr}.wall{height:340px;transform:rotate(-3deg)}.how{grid-template-columns:1fr}.faq{grid-template-columns:1fr}}
+@media (max-width:640px){.top nav{display:none}.srch{flex:1 1 100%}.hero h1 .num{-webkit-text-stroke-width:2px}.wall{height:260px}.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.col{animation:none}.card,.col a{transition:none}}"""
+JS="""<script>
+(()=>{const q=document.getElementById('q'),chips=document.getElementById('chips'),cnt=document.getElementById('cnt'),none=document.getElementById('none');if(!q)return;let cat='all';
+const cards=[...document.querySelectorAll('.card')],secs=[...document.querySelectorAll('.sec')];
+function run(){const v=q.value.trim().toLowerCase();let n=0;cards.forEach(c=>{const ok=(cat==='all'||c.dataset.cat===cat)&&(!v||c.dataset.s.includes(v));c.hidden=!ok;if(ok)n++});
+secs.forEach(s=>{s.hidden=![...s.querySelectorAll('.card')].some(c=>!c.hidden)});cnt.textContent='Showing '+n+' of '+cards.length;none.hidden=n>0}
+q.addEventListener('input',run);if(chips)chips.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;chips.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));cat=b.dataset.c;run();document.getElementById('templates').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});run();})();
+</script>"""
 def ld(obj): return '<script type="application/ld+json">\n'+json.dumps(obj,indent=1,ensure_ascii=False)+'\n</script>'
-def faq_html(): return "<h2 id='faq'>Questions people ask</h2><div class='faq'>"+''.join(f"<details{' open' if i==0 else ''}><summary>{e(q)}</summary><p>{e(a)}</p></details>" for i,(q,a) in enumerate(FAQ))+"</div>"
+def faq_html(): return "<section class='sec' aria-labelledby='faq'><div class='sh'><div><h2 id='faq'>Questions people ask</h2></div></div><div class='faq'>"+''.join(f"<details{' open' if i==0 else ''}><summary>{e(q)}</summary><p>{e(a)}</p></details>" for i,(q,a) in enumerate(FAQ))+"</div></section>"
 def faq_ld(): return {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in FAQ]}
 def itemlist(ts): return {"@type":"ItemList","numberOfItems":len(ts),"itemListElement":[{"@type":"ListItem","position":i+1,"url":f"{BASE}{t['cat']}/{t['slug']}/","name":f"{t['name']}: free {t['type'].lower()} website template"} for i,t in enumerate(ts)]}
-def page(title,desc,canon,h1,intro,crumb,body,graph):
+def wall(ts,prefix):
+    pick=ts[::max(1,len(ts)//10)][:10] if len(ts)>10 else ts
+    half=[pick[0::2],pick[1::2]]
+    out=''
+    for k,h in enumerate(half):
+        items=''.join(f'<a href="{prefix(t)}{t["slug"]}/" tabindex="-1"><img src="{prefix(t)}{t["slug"]}/screenshot.png" alt="" width="1440" height="900" loading="{"eager" if k==0 else "lazy"}"></a>' for t in h)
+        out+=f'<div class="col{" b" if k else ""}">{items}{items}</div>'
+    return f'<div class="wall" aria-hidden="true">{out}</div>'
+def page(title,desc,canon,h1html,intro,crumb,body,graph,wallhtml,stats,bar):
     img=f"{BASE}{T[0]['cat']}/{T[0]['slug']}/screenshot.png"
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="{canon}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Free HTML Templates"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{canon}">
 <meta property="og:image" content="{img}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{img}">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23141A26'/><path d='M22 22l-8 10 8 10M42 22l8 10-8 10' stroke='%232F6BFF' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="theme-color" content="#16181F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316181F'/><text x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23FFC53D'>100</text></svg>">
 {ld({"@context":"https://schema.org","@graph":graph})}
 <style>{CSS}</style></head><body>
-<header><div class="wrap">{crumb}<h1>{e(h1)}</h1><p>{e(intro)}</p><ul class="perks"><li>100% free, MIT license</li><li>One HTML file each</li><li>Works on phones</li><li>SEO ready</li></ul><div class="meta"><a href="#templates">Browse the templates</a><a class="alt" href="#faq">How to use them</a></div></div></header>
+<a class="skip" href="#templates">Skip to templates</a>
+<header class="wrap top"><a class="brand" href="{BASE}"><i>100</i>Free HTML Templates</a><nav aria-label="Main"><a href="{BASE}#templates">Templates</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="{REPO}">GitHub</a></nav></header>
+<section class="hero" aria-labelledby="h1"><div class="wrap hg"><div>{crumb}<span class="kick"><b>Free</b>MIT license, no sign up</span><h1 id="h1">{h1html}</h1><p class="lead">{e(intro)}</p><div class="btns"><a class="btn" href="#templates">Browse the templates</a><a class="btn l" href="#how">How to use them</a></div>{stats}</div>{wallhtml}</div></section>
+{bar}
 <main id="templates"><div class="wrap">{body}</div></main>
-<footer><div class="wrap">Free, MIT-licensed HTML website templates. Photos from Unsplash. Updated {today:%B %Y}.</div></footer>
+<footer><div class="wrap"><span>Free, MIT-licensed HTML website templates. Photos from Unsplash. Updated {today:%B %Y}.</span><span><a href="{REPO}">Source on GitHub</a></span></div></footer>
+{JS}
 </body></html>"""
-def card(t,prefix):
-    return f"""<article class="card"><img src="{prefix}{t['slug']}/screenshot.png" alt="{e(t['name'])}, free {e(t['type'].lower())} website template" width="1440" height="900" loading="lazy"><div class="body"><span class="type">{e(t['type'])}</span><h3>{e(t['name'])}</h3><p>{e(t['desc'])}</p><div class="links"><a href="{prefix}{t['slug']}/">Live demo</a><a href="{prefix}{t['slug']}/index.html" download="{t['slug']}.html">Download</a></div></div></article>"""
-HOW="<h2>How to use a template</h2><p class='sub'>Three steps, no special software.</p><div class='how'><div><b>1. Download</b><p>Pick a template, open the live demo and click Download. You get one HTML file.</p></div><div><b>2. Edit</b><p>Open the file in any text editor and change the words, colours and photos to match your business.</p></div><div><b>3. Publish</b><p>Upload the file to GitHub Pages, Netlify or your own web host. Your site is live.</p></div></div>"
+def card(t,prefix,n):
+    c=COL.get(t['slug'],'#3D5AFE');s=e((t['name']+' '+t['type']+' '+t['desc']+' '+t.get('keywords','')).lower())
+    return f"""<article class="card" data-cat="{t['cat']}" data-s="{s}" style="--c:{c}"><div class="shot"><div class="chrome" aria-hidden="true"><i></i><i></i><i></i></div><span class="idx" aria-hidden="true">#{n:03d}</span><img src="{prefix}{t['slug']}/screenshot.png" alt="{e(t['name'])}, free {e(t['type'].lower())} website template" width="1440" height="900" loading="lazy"></div><div class="body"><span class="ty"><i aria-hidden="true"></i>{e(t['type'])}</span><h3>{e(t['name'])}</h3><p>{e(t['desc'])}</p><div class="fn">{e(t['fonts'])}</div><div class="links"><a href="{prefix}{t['slug']}/">Live demo</a><a href="{prefix}{t['slug']}/index.html" download="{t['slug']}.html">Download</a></div></div></article>"""
+HOW="<section class='sec' id='how' aria-labelledby='how-t'><div class='sh'><div><h2 id='how-t'>How to use a template</h2><p>Three steps, no special software.</p></div></div><div class='how'><div><span>1</span><b>Download</b><p>Pick a template, open the live demo and click Download. You get one HTML file.</p></div><div><span>2</span><b>Edit</b><p>Open the file in any text editor and change the words, colours and photos to match your business.</p></div><div><span>3</span><b>Publish</b><p>Upload the file to GitHub Pages, Netlify or your own web host. Your site is live.</p></div></div></section>"
+IDX={t['slug']:i+1 for i,t in enumerate(T)}
+def barhtml(cats_on):
+    chips=''
+    if cats_on:
+        chips="<div class='chips' id='chips' role='group' aria-label='Filter by category'><button type='button' aria-pressed='true' data-c='all'>All<span>"+str(N)+"</span></button>"+''.join(f"<button type='button' aria-pressed='false' data-c='{k}'>{e(v['name'])}<span>{sum(t['cat']==k for t in T)}</span></button>" for k,v in C.items())+"</div>"
+    return f"<div class='bar'><div class='wrap'><div class='srch' role='search'><svg width='16' height='16' viewBox='0 0 24 24' aria-hidden='true'><circle cx='10' cy='10' r='7' fill='none' stroke='#5E6372' stroke-width='2.5'/><path d='M15 15l6 6' stroke='#5E6372' stroke-width='2.5'/></svg><label for='q' style='position:absolute;left:-999px'>Search templates</label><input id='q' type='search' placeholder='Search: dentist, booking, dark...'></div>{chips}<span class='count' id='cnt' aria-live='polite'></span></div></div>"
+NONE="<p class='none' id='none' hidden>No templates match that search. Try a simpler word, like shop or clinic.</p>"
+def statshtml(n,k): return f"<ul class='stats'><li><b>{n}</b>templates</li>"+(f"<li><b>{k}</b>categories</li>" if k else "")+"<li><b>1</b>HTML file each</li><li><b>MIT</b>license</li></ul>"
 # category pages
 for ck,cv in C.items():
     ts=[t for t in T if t['cat']==ck]; canon=f"{BASE}{ck}/"
-    body=f"<h2>{len(ts)} free {e(cv['name'].lower())} templates</h2><p class='sub'>Click a template to see the live demo, or download it straight away.</p><div class='grid'>"+''.join(card(t,'') for t in ts)+"</div>"+HOW+faq_html()
+    body=f"<section class='sec' aria-labelledby='cat-t'><div class='sh'><div><h2 id='cat-t'>{len(ts)} free {e(cv['name'].lower())} templates</h2><p>Click a template to see the live demo, or download it straight away.</p></div><a class='all' href='../'>All {N} templates</a></div><div class='grid'>"+''.join(card(t,'',IDX[t['slug']]) for t in ts)+"</div></section>"+NONE+HOW+faq_html()
     graph=[{"@type":"CollectionPage","@id":canon,"url":canon,"name":cv['title'],"description":cv['desc'],"inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Free HTML Templates","url":BASE},"mainEntity":itemlist(ts)},
            {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Free HTML Templates","item":BASE},{"@type":"ListItem","position":2,"name":f"{cv['name']} Templates","item":canon}]},faq_ld()]
-    open(f"{root}{ck}/index.html",'w').write(page(cv['title'],cv['desc'],canon,f"Free {cv['name'].lower()} website templates",cv['intro'],f"<div class='crumb'><a href='../'>All templates</a> / {e(cv['name'])}</div>",body,graph))
+    h1=f"Free {e(cv['name'].lower())} <span class='hl'>website templates</span>"
+    open(f"{root}{ck}/index.html",'w').write(page(cv['title'],cv['desc'],canon,h1,cv['intro'],f"<div class='crumb'><a href='../'>All templates</a> / {e(cv['name'])}</div>",body,graph,wall(ts,lambda t:''),statshtml(len(ts),0),barhtml(False)))
 # root
-cats="<div class='cats'>"+''.join(f"<a href='{k}/'>{e(v['name'])} ({sum(t['cat']==k for t in T)})</a>" for k,v in C.items())+"</div>"
-body=cats
+body=""
 for ck,cv in C.items():
     ts=[t for t in T if t['cat']==ck]
-    body+=f"<h2 id='{ck}'>{e(cv['name'])} templates</h2><p class='sub'>{e(cv['intro'])} <a href='{ck}/'>See all {e(cv['name'].lower())} templates</a></p><div class='grid'>"+''.join(card(t,ck+'/') for t in ts)+"</div>"
-body+=HOW+faq_html()
+    body+=f"<section class='sec' id='{ck}' aria-labelledby='h-{ck}'><div class='sh'><div><h2 id='h-{ck}'>{e(cv['name'])}</h2><p>{e(cv['intro'])}</p></div><a class='all' href='{ck}/'>See all {len(ts)}</a></div><div class='grid'>"+''.join(card(t,ck+'/',IDX[t['slug']]) for t in ts)+"</div></section>"
+body+=NONE+HOW+faq_html()
 rt=f"{N} Free HTML Website Templates {YEAR}: Download and Edit"
 pl=[v.get("short",v.get("plural",v["name"])) for v in C.values()]
 rd=f"{N} free HTML templates, one file each: "+(", ".join(pl[:-1])+" and "+pl[-1] if len(pl)>1 else pl[0])+". No coding needed. Mobile friendly and SEO ready."
@@ -169,7 +233,8 @@ if len(rd)>160: rd=rd.replace(" No coding needed.","")
 if len(rd)>160: rd=f"{N} free HTML templates, one file each, for {len(pl)} kinds of websites. No coding needed. Mobile friendly and SEO ready."
 graph=[{"@type":"WebSite","@id":BASE+"#website","url":BASE,"name":"Free HTML Templates","description":rd,"inLanguage":"en"},
        {"@type":"CollectionPage","@id":BASE,"url":BASE,"name":rt,"description":rd,"isPartOf":{"@id":BASE+"#website"},"mainEntity":itemlist(T)},faq_ld()]
-open(root+'index.html','w').write(page(rt,rd,BASE,"Free HTML website templates you can edit in minutes","Each template is one HTML file. Open it, change the text and photos, and upload it. No WordPress, no page builder and no monthly fees. Free for personal and business use.","",body,graph))
+h1=f"<span class='num'>{N}</span>free website templates <span class='hl'>you can edit today</span>"
+open(root+'index.html','w').write(page(rt,rd,BASE,h1,"Each template is one HTML file. Open it, change the text and photos, and upload it. No WordPress, no page builder and no monthly fees. Free for personal and business use.","",body,graph,wall(T,lambda t:t['cat']+'/'),statshtml(N,len(C)),barhtml(True)))
 # root README
 rows="\n".join(f"| [![{t['name']}]({t['cat']}/{t['slug']}/screenshot.png)]({BASE}{t['cat']}/{t['slug']}/) | **[{t['name']}]({t['cat']}/{t['slug']}/)**<br>{t['type']} template<br><br>{t['desc']}<br><br>[Live demo and download]({BASE}{t['cat']}/{t['slug']}/) |" for t in T)
 faqmd="\n\n".join(f"**{q}**<br>{a}" for q,a in FAQ)
